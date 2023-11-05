@@ -4,7 +4,7 @@
 % Oct 31 2023
 % Wavetable Generation
 %} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%{
 clear
 sysClock = 10000;
 sampFreq = sysClock;
@@ -45,9 +45,12 @@ finalList = cat(2, table(1, 1:344), table(2, 1:469), table(3, 1:647), ...
              table(11, 1:665), ...
              table(12, 1:81) ...
              );
-
+%}
 %%
 clear
-t = 0:0.00125:1;
+t = 0:0.00390625:1;
 table = uint8(127*sin(2*pi*t) + 127);
+column = table';
 plot(table)
+data = dec2hex(column(1:256));
+writematrix(data,'wave.txt', 'Delimiter', 'space');
