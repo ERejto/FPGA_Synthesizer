@@ -12,7 +12,7 @@ Purpose : Generic application start
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "stm32l4xx_hal_driver/Inc/stm32l4xx_hal_dac.h"
+#include "STM32L432KC.h"
 
 /*********************************************************************
 *
@@ -22,14 +22,18 @@ Purpose : Generic application start
 *   Application entry point.
 */
 int main(void) {
-  DAC_HandleTypeDef hdac1;
+  initTIM(TIM15);
+  RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN | RCC_AHB2ENR_GPIOBEN | RCC_AHB2ENR_GPIOCEN);
+  DAC_init();
 
-  HAL_DAC_Init(hdac1);
-  for (i = 0; i < 100; i++) {
-    printf("Hello World %d!\n", i);
-  }
+
+  // "clock divide" = master clock frequency / desired baud rate
+  // the phase for the SPI clock is 1 and the polarity is 0
+  initSPI(1, 0, 0);
+
   do {
-    i++;
+   char readVal = spiSendReceive(12);
+   DAC_write(readVal);
   } while (1);
 }
 

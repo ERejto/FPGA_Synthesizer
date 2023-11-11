@@ -1,0 +1,214 @@
+    468B        mov r11, r1
+    4680        mov r8, r0
+    2000        movs r0, #0
+    F8C80000    str.w r0, [r8, #0]
+    F10D000E    add.w r0, sp, #14
+    F1A00A01    sub.w r10, r0, #1
+    465D        mov r5, r11
+    F8151B01    ldrb r1, [r5], #1
+    2925        cmp r1, #0x25
+    D007        beq 0x08000974
+    2900        cmp r1, #0
+    F0008199    beq.w 0x08000C9C
+    4640        mov r0, r8
+    F000FBC2    bl 0x080010F4 <__SEGGER_RTL_putc>
+    46AB        mov r11, r5
+    E7F2        b 0x0800095A
+    F10B0B02    add.w r11, r11, #2
+    2400        movs r4, #0
+    F81B2C01    ldrb r2, [r11, #-1]
+    2A2A        cmp r2, #0x2A
+    DC08        bgt 0x08000994
+    2A20        cmp r2, #32
+    D013        beq 0x080009AE
+    2A23        cmp r2, #0x23
+    D013        beq 0x080009B2
+    2A27        cmp r2, #0x27
+    D146        bne 0x08000A1C
+    F44F4000    mov.w r0, #0x8000
+    E00F        b 0x080009B4
+    2A5D        cmp r2, #0x5D
+    DD06        ble 0x080009A6
+    2A67        cmp r2, #0x67
+    DC0F        bgt 0x080009BC
+    2A5E        cmp r2, #0x5E
+    D13D        bne 0x08000A1C
+    F44F5080    mov.w r0, #0x1000
+    E006        b 0x080009B4
+    2A2B        cmp r2, #0x2B
+    D138        bne 0x08000A1C
+    2020        movs r0, #32
+    E002        b 0x080009B4
+    2040        movs r0, #0x40
+    E000        b 0x080009B4
+    2080        movs r0, #0x80
+    4304        orrs r4, r0
+    F10B0B01    add.w r11, r11, #1
+    E7DE        b 0x0800097A
+    2A6B        cmp r2, #0x6B
+    DD08        ble 0x080009D2
+    2A6C        cmp r2, #0x6C
+    D00D        beq 0x080009E0
+    2A74        cmp r2, #0x74
+    BF18        it ne
+    2A7A        cmpne r2, #0x7A
+    D127        bne 0x08000A1C
+    F81B2B01    ldrb r2, [r11], #1
+    E024        b 0x08000A1C
+    2A68        cmp r2, #0x68
+    D010        beq 0x080009F8
+    2A6A        cmp r2, #0x6A
+    D120        bne 0x08000A1C
+    F81B2B01    ldrb r2, [r11], #1
+    E008        b 0x080009F2
+    4658        mov r0, r11
+    F8102B01    ldrb r2, [r0], #1
+    2A6C        cmp r2, #0x6C
+    D112        bne 0x08000A10
+    F89B2001    ldrb.w r2, [r11, #1]
+    F10B0B02    add.w r11, r11, #2
+    F0440402    orr r4, r4, #2
+    E011        b 0x08000A1C
+    4658        mov r0, r11
+    F8102B01    ldrb r2, [r0], #1
+    2A68        cmp r2, #0x68
+    D109        bne 0x08000A16
+    F89B2001    ldrb.w r2, [r11, #1]
+    F10B0B02    add.w r11, r11, #2
+    F0440408    orr r4, r4, #8
+    E005        b 0x08000A1C
+    F0440401    orr r4, r4, #1
+    E001        b 0x08000A1A
+    F0440404    orr r4, r4, #4
+    4683        mov r11, r0
+    2A62        cmp r2, #0x62
+    DD16        ble 0x08000A4E
+    F1A20063    sub.w r0, r2, #0x63
+    2815        cmp r0, #21
+    F63FAF98    bhi.w 0x0800095A
+    2500        movs r5, #0
+    E8DFF000    tbb [pc, r0]
+    1a          0x08000a64
+    0c          0x08000a48
+    0b          0x08000a46
+    0b          0x08000a46
+    0b          0x08000a46
+    0b          0x08000a46
+    0c          0x08000a48
+    0b          0x08000a46
+    0b          0x08000a46
+    0b          0x08000a46
+    0b          0x08000a46
+    20          0x08000a70
+    2c          0x08000a88
+    31          0x08000a92
+    0b          0x08000a46
+    0b          0x08000a46
+    3b          0x08000aa6
+    0b          0x08000a46
+    4c          0x08000ac8
+    0b          0x08000a46
+    0b          0x08000a46
+    16          0x08000a5c
+    E788        b 0x0800095A
+    F4444480    orr r4, r4, #0x4000
+    E03C        b 0x08000AC8
+    2A25        cmp r2, #0x25
+    D079        beq 0x08000B46
+    2A58        cmp r2, #0x58
+    F040811A    bne.w 0x08000C8C
+    F4445400    orr r4, r4, #0x2000
+    0620        lsls r0, r4, #24
+    D42D        bmi 0x08000ABC
+    2500        movs r5, #0
+    E031        b 0x08000AC8
+    F8171B04    ldrb r1, [r7], #4
+    4640        mov r0, r8
+    F000FB43    bl 0x080010F4 <__SEGGER_RTL_putc>
+    E774        b 0x0800095A
+    F8570B04    ldr r0, [r7], #4
+    0721        lsls r1, r4, #28
+    F100810D    bmi.w 0x08000C94
+    07A1        lsls r1, r4, #30
+    F8D81000    ldr.w r1, [r8, #0]
+    BF54        ite pl
+    6001        strpl r1, [r0]
+    C022        stmmi r0!, {r1, r5}
+    E768        b 0x0800095A
+    0620        lsls r0, r4, #24
+    2130        movs r1, #0x30
+    EA0175E0    and.w r5, r1, r0, asr #31
+    E01A        b 0x08000AC8
+    F8570B04    ldr r0, [r7], #4
+    0621        lsls r1, r4, #24
+    2223        movs r2, #0x23
+    EA0275E1    and.w r5, r2, r1, asr #31
+    F4447480    orr r4, r4, #0x0100
+    2100        movs r1, #0
+    E0B0        b 0x08000C08
+    F8575B04    ldr r5, [r7], #4
+    F8151B01    ldrb r1, [r5], #1
+    2900        cmp r1, #0
+    F43FAF53    beq.w 0x0800095A
+    4640        mov r0, r8
+    F000FB1D    bl 0x080010F4 <__SEGGER_RTL_putc>
+    E7F6        b 0x08000AAA
+    F2430558    movw r5, #0x3058
+    2A78        cmp r2, #0x78
+    BF08        it eq
+    F2430578    movweq r5, #0x3078
+    0460        lsls r0, r4, #17
+    D404        bmi 0x08000AD6
+    07A0        lsls r0, r4, #30
+    D408        bmi 0x08000AE2
+    1D3B        adds r3, r7, #4
+    2100        movs r1, #0
+    E00B        b 0x08000AEE
+    07A0        lsls r0, r4, #30
+    D412        bmi 0x08000B00
+    F8570B04    ldr r0, [r7], #4
+    17C1        asrs r1, r0, #31
+    E014        b 0x08000B0C
+    1DF8        adds r0, r7, #7
+    F0200707    bic r7, r0, #7
+    F1070308    add.w r3, r7, #8
+    6879        ldr r1, [r7, #4]
+    6838        ldr r0, [r7]
+    0767        lsls r7, r4, #29
+    D413        bmi 0x08000B1C
+    F0140708    ands r7, r4, #8
+    BF1C        itt ne
+    B2C0        uxtbne r0, r0
+    2100        movne r1, #0
+    E00F        b 0x08000B20
+    1DF8        adds r0, r7, #7
+    F0200707    bic r7, r0, #7
+    6879        ldr r1, [r7, #4]
+    F8570B08    ldr r0, [r7], #8
+    0763        lsls r3, r4, #29
+    D409        bmi 0x08000B24
+    0723        lsls r3, r4, #28
+    BF44        itt mi
+    F34011C0    sbfxmi r1, r0, #7, #1
+    B240        sxtbmi r0, r0
+    E006        b 0x08000B2A
+    B280        uxth r0, r0
+    2100        movs r1, #0
+    461F        mov r7, r3
+    E016        b 0x08000B52
+    F34031C0    sbfx r1, r0, #15, #1
+    B200        sxth r0, r0
+    2900        cmp r1, #0
+    DB05        blt 0x08000B3A
+    06A3        lsls r3, r4, #26
+    D40E        bmi 0x08000B50
+    0663        lsls r3, r4, #25
+    BF48        it mi
+    2520        movmi r5, #32
+    E00B        b 0x08000B52
+    2300        movs r3, #0
+    4240        rsbs r0, r0, #0
+    EB630101    sbc.w r1, r3, r1
+    252D        movs r5, #0x2D
+    E005        b 0x08000B52
+    4640        mov r0, r8
