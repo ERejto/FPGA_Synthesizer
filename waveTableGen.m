@@ -41,8 +41,8 @@ writematrix(data,'wave8.txt', 'Delimiter', 'space');
 %clear
 modulationPhase = 0:6711:4294967295; %50 hz modulation
 carrierPhase = 0:35115:4294967295; %261.63 hz carrier frequency
-totalTime = 1600000; % total samples/clocks % i is a clock cycle basically 
-time = (0:1/16000000:0.1-1/16000000)*1000; %time in ms
+totalTime = 3200000; % total samples/clocks % i is a clock cycle basically 
+time = (0:1/32000000:0.1-1/32000000)*1000; %time in ms
 %Generate modulation and carrier (for plotting) waveform 
 modAccum(1) = 0;
 carAccumPlt(1) = 0;
