@@ -21,4 +21,5 @@ Output/Debug/Obj/microPFinalProj/STM32L432KC_SPI.o: \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_FLASH.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_USART.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_SPI.h \
-  /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_DAC.h
+  /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_DAC.h \
+  /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_I2C.h

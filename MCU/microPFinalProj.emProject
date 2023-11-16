@@ -64,14 +64,17 @@
       <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
       <configuration Name="Debug" build_exclude_from_build="No" />
       <file file_name="main.c" />
-      <file file_name="MyFile.txt" />
       <file file_name="STM32L432KC.h" />
+      <file file_name="STM32L432KC_ADC.c" />
+      <file file_name="STM32L432KC_ADC.h" />
       <file file_name="STM32L432KC_DAC.c" />
       <file file_name="STM32L432KC_DAC.h" />
       <file file_name="STM32L432KC_FLASH.c" />
       <file file_name="STM32L432KC_FLASH.h" />
       <file file_name="STM32L432KC_GPIO.c" />
       <file file_name="STM32L432KC_GPIO.h" />
+      <file file_name="STM32L432KC_I2C.c" />
+      <file file_name="STM32L432KC_I2C.h" />
       <file file_name="STM32L432KC_RCC.c" />
       <file file_name="STM32L432KC_RCC.h" />
       <file file_name="STM32L432KC_SPI.c" />
@@ -80,6 +83,8 @@
       <file file_name="STM32L432KC_TIM.h" />
       <file file_name="STM32L432KC_USART.c" />
       <file file_name="STM32L432KC_USART.h" />
+      <file file_name="SynthFuncs.c" />
+      <file file_name="SynthFuncs.h" />
     </folder>
     <folder Name="System Files">
       <file file_name="SEGGER_THUMB_Startup.s" />

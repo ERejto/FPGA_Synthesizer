@@ -28,14 +28,41 @@ errorNoRound = 100*((notes4-fnoRound)./notes4);
 factualHigh = round((200000*fclk)/k);
 
 
-%% wave table gen
+%% wave table gen 
 clear
-t = 0:0.00390625:1;
-waveTable = uint8(127*sin(2*pi*t) + 127);
-column = waveTable';
-plot(waveTable)
-data = dec2hex(column(1:256));
-writematrix(data,'wave8.txt', 'Delimiter', 'space');
+t = 0:0.00390625:1; % 1 period of wave
+
+%sin wave
+waveTableSin = uint8(127*sin(2*pi*t) + 127);
+subplot(2, 2, 1)
+plot(waveTableSin)
+columnSin = waveTableSin';
+writeData = dec2hex(columnSin(1:256));
+writematrix(writeData,'waveSin8.txt', 'Delimiter', 'space');
+
+%sawtooth
+waveTableSaw = uint8(127*sawtooth(2*pi*t) + 127);
+subplot(2, 2, 2)
+plot(waveTableSaw)
+columnSaw= waveTableSaw';
+writeData = dec2hex(columnSaw(1:256));
+writematrix(writeData,'waveSaw8.txt', 'Delimiter', 'space');
+
+% Triangle
+waveTableTri = uint8(127*sawtooth(2*pi*t, .5) + 127);
+subplot(2, 2, 3)
+plot(waveTableTri)
+columnTri= waveTableTri';
+writeData = dec2hex(columnTri(1:256));
+writematrix(writeData,'waveTri8.txt', 'Delimiter', 'space');
+
+%square maybe want square wave different so can change duty cycle
+waveTableSqr = uint8(127*square(2*pi*t) + 127);
+subplot(2, 2, 4)
+plot(waveTableSqr)
+columnSqr= waveTableSqr';
+writeData = dec2hex(columnSqr(1:256));
+writematrix(writeData,'waveSqr8.txt', 'Delimiter', 'space');
 
 %% Frequency Modulation Modeling (must run wave table gen first)
 %clear
@@ -56,8 +83,8 @@ indexMod = bitshift(modAccum, -24)+1;
 indexCarPlt = bitshift(carAccumPlt, -24)+1;
 
 for i = 1:totalTime %use wavetable to find values of curve
-    valsMod(i) = waveTable(indexMod(i));
-    valsCarPlt(i) = waveTable(indexCarPlt(i));
+    valsMod(i) = waveTableSaw(indexMod(i));
+    valsCarPlt(i) = waveTableSin(indexCarPlt(i));
 end
 
 % Generate Modulated Waveform
@@ -70,7 +97,7 @@ end
 indexSig = bitshift(signalAccum, -24)+1;
 
 for i = 1:totalTime
-    valsSig(i) = waveTable(indexSig(i));
+    valsSig(i) = waveTableSin(indexSig(i));
 end
 
 plot(time, valsSig)
@@ -92,8 +119,8 @@ t = 0:0.00024414062:1;
 table = uint16(2047*sin(2*pi*t) + 2047);
 column = table';
 plot(table)
-data = dec2hex(column(1:4096));
-writematrix(data,'wave12.txt', 'Delimiter', 'space');
+writeData = dec2hex(column(1:4096));
+writematrix(writeData,'wave12.txt', 'Delimiter', 'space');
 
 
 %% phase accumulator calculator
@@ -115,6 +142,54 @@ error = 100*((notes4-factual)./notes4);
 errorNoRound = 100*((notes4-fnoRound)./notes4);
 
 factualLow = round((200000*fclk)/k);
+
+
+%% Testing 
+data = [151, 
+104, 
+40, 
+249, 
+186, 
+123, 
+92, 
+12, 
+189, 
+45, 
+222, 
+94, 
+207, 
+47, 
+127, 
+175, 
+223, 
+239, 
+239, 
+223, 
+175, 
+95, 
+14, 
+174, 
+61, 
+189, 
+44, 
+139, 
+235, 
+42, 
+121, 
+184, 
+248, 
+39, 
+102, 
+149, 
+212, 
+228, 
+51, 
+130, 
+226, 
+81, 
+209];
+
+plot(data)
 
 %% not helpful?
 %{

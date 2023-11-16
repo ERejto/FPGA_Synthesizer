@@ -19,6 +19,7 @@
 #include "STM32L432KC_USART.h"
 #include "STM32L432KC_SPI.h"
 #include "STM32L432KC_DAC.h"
+#include "STM32L432KC_I2C.h"
 
 // Global defines
 
