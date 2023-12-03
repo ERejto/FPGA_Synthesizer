@@ -152,8 +152,8 @@ plot(final12bit)
 
 %% simulation plotter
 
-a = readmatrix("output_vol.txt", 'OutputType','char');
-text = a(2:end);
+a = readtable("output_vol.csv");
+text = ;
 data = hex2dec(text);
 plot(data);
 

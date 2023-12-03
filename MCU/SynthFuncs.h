@@ -5,6 +5,6 @@
 
 char encoder(char vals);
 
-void playNote(char note);
+void playNote(uint16_t note);
 
 #endif

@@ -8,5 +8,4 @@ char encoder(char vals) {
 
 void playNote(char note) {
   char readVal = spiSendReceive(note);
-  DAC_write(readVal);
 }
