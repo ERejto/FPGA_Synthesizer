@@ -3,8 +3,13 @@
 
 #include <stm32l432xx.h>
 
-char encoder(char vals);
+// recursive encoder that finds the MSB
+uint8_t encoder(uint8_t vals);
 
+// send a 16 bit value over SPI link to the FPGA
 void playNote(uint16_t note);
+
+// read 12 buttons in gpio, encode in 1 in notesRead
+void button_read(uint16_t *notesRead);
 
 #endif

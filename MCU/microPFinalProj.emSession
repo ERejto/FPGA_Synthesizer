@@ -1,9 +1,7 @@
 <!DOCTYPE CrossStudio_Session_File>
 <session>
  <Bookmarks/>
- <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
- </Breakpoints>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
  <ExecutionProfileWindow/>
  <FrameBuffer>
   <FrameBufferWindow width="0" keepAspectRatio="0" zoomToFitWindow="0" addressSpace="" format="0" height="0" autoEvaluate="0" scaleFactor="1" refreshPeriod="0" name="microPFinalProj_Debug" addressText="" accessByDisplayWidth="0"/>
@@ -25,6 +23,7 @@
   <ProjectSessionItem path="microPFinalProj;microPFinalProj"/>
   <ProjectSessionItem path="microPFinalProj;microPFinalProj;CMSIS Files"/>
   <ProjectSessionItem path="microPFinalProj;microPFinalProj;Source Files"/>
+  <ProjectSessionItem path="microPFinalProj;microPFinalProj;System Files"/>
  </Project>
  <Register1>
   <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="" name="microPFinalProj_Debug" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -47,7 +46,7 @@
  <Watch1>
   <Watches active="1" update="Never">
    <Watchpoint expression="readVal" name="readVal" radix="16" linenumber="0" filename="../MCU"/>
-   <Watchpoint expression="RCC->CR" name="RCC->CR" radix="16" linenumber="0" filename=""/>
+   <Watchpoint expression="RCC->CR" name="RCC->CR" radix="16" linenumber="0" filename="../MCU"/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -60,20 +59,25 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="10" y="47" useTextEdit="1" path="main.c" left="0" top="26" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="52" useTextEdit="1" openedFrom="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/main.c" path="STM32L432KC_SPI.c" left="0" top="14" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="6" useTextEdit="1" path="STM32L432KC_TIM.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" path="main.c" left="0" top="8" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="53" useTextEdit="1" openedFrom="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/main.c" path="STM32L432KC_SPI.c" left="0" top="18" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="24" useTextEdit="1" path="STM32L432KC_TIM.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_TIM.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="11" useTextEdit="1" path="STM32L432KC_DAC.c" left="0" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="11" useTextEdit="1" path="STM32L432KC_DAC.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_DAC.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="28" y="21" useTextEdit="1" path="STM32L432KC.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="8155" useTextEdit="1" openedFrom="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_I2C.c" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="8135" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="13" useTextEdit="1" path="STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="41" useTextEdit="1" path="STM32L432KC_I2C.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="13" useTextEdit="1" path="STM32L432KC_I2C.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="11" useTextEdit="1" path="SynthFuncs.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="9" useTextEdit="1" path="SynthFuncs.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="21" useTextEdit="1" path="STM32L432KC.h" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="8155" useTextEdit="1" openedFrom="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_I2C.c" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="8137" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="14" y="10" useTextEdit="1" openedFrom="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_SPI.c" path="STM32L432KC_SPI.h" left="0" top="1" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="13" useTextEdit="1" path="STM32L432KC_FLASH.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="14" useTextEdit="1" path="STM32L432KC_RCC.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="23" y="5" useTextEdit="1" path="STM32L432KC_FLASH.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="27" useTextEdit="1" openedFrom="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/main.c" path="STM32L432KC_RCC.c" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="11" useTextEdit="1" path="SynthFuncs.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="SynthFuncs.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="98" useTextEdit="1" path="STM32L432KC_GPIO.c" left="0" top="82" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="198" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="182" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="219" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="203" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" selected="1" top="0" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="microPFinalProj" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

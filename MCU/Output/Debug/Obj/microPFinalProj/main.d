@@ -6,6 +6,7 @@ Output/Debug/Obj/microPFinalProj/main.o: \
   /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 7.32/include/__SEGGER_RTL_Conf.h \
   /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 7.32/include/__SEGGER_RTL_Arm_Conf.h \
   /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 7.32/include/stdlib.h \
+  /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 7.32/include/stdbool.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC.h \
   /Applications/SEGGER\ Embedded\ Studio\ for\ ARM\ 7.32/include/stdint.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L4xx/Device/Include/stm32l432xx.h \
@@ -23,4 +24,5 @@ Output/Debug/Obj/microPFinalProj/main.o: \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_SPI.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_DAC.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_I2C.h \
+  /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/STM32L432KC_ADC.h \
   /Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU/SynthFuncs.h
