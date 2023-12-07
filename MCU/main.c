@@ -98,6 +98,7 @@ ADC TEST CODE
   pinMode(PB1,GPIO_OUTPUT);
   uint8_t data;
   I2C_init();
+  button_init();
 
   I2C_setup_peripheral();
   I2C_select_register(GPIO_REGISTER);
