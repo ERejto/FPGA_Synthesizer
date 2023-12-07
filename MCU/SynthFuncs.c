@@ -36,28 +36,40 @@ PA2
 void button_init(void) {
   gpioEnable(PA0);
   pinMode(PA0,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD0_Pos;
   gpioEnable(PA1);
   pinMode(PA1,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD1_Pos;
   gpioEnable(PA2);
   pinMode(PA2,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD2_Pos;
   gpioEnable(PA7);
   pinMode(PA7,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD7_Pos;
   gpioEnable(PA8);
   pinMode(PA8,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD8_Pos;
   gpioEnable(PA9);
   pinMode(PA9,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD9_Pos;
   gpioEnable(PA10);
   pinMode(PA10,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD10_Pos;
   gpioEnable(PA12);
   pinMode(PA12,GPIO_INPUT); 
+  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD12_Pos;
   gpioEnable(PB0);
   pinMode(PB0,GPIO_INPUT); 
+  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD0_Pos;
   gpioEnable(PB1);
   pinMode(PB1,GPIO_INPUT); 
+  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD1_Pos;
   gpioEnable(PB6);
-  pinMode(PB6,GPIO_INPUT); 
+  pinMode(PB6,GPIO_INPUT);
+  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD6_Pos;
   gpioEnable(PB7);
   pinMode(PB7,GPIO_INPUT); 
+  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD7_Pos;
 }
 
 void playNote(uint16_t note) {

@@ -6,6 +6,9 @@
 // recursive encoder that finds the MSB
 uint8_t encoder(uint8_t vals);
 
+//Initializes button GPIO pins
+void button_init(void);
+
 // send a 16 bit value over SPI link to the FPGA
 void playNote(uint16_t note);
 

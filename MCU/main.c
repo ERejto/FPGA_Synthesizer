@@ -30,6 +30,7 @@ Purpose : Generic application start
 =======
 int main(void) {
   gpioEnable(GPIO_PORT_A);
+  GPIOB -> PUPD
 >>>>>>> 6af40590bf985ed398c7eb40ff9c2bf6d381391c
   RCC->CR &= 1; // MSI off
   RCC->CR &= ~(0xF<<4);
