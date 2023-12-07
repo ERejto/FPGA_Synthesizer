@@ -1,7 +1,7 @@
 %{ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Kevin Box
 % kbox@hmc.edu
-% Oct 31 2023
+% Dec 7 2023
 % Wavetable Generation
 %} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -9,23 +9,23 @@
 
 %% phase accumulator calculator
 
-notes4 = [10 65 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88 1000];
-fclk = 4000000; %16m? no 24 M
+notes4 = [10 50 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88 1000];
+fclk = 4000000; %16m? no 24 M tuned with 4M not sure why
 indexes = 256;
 indexVal = 16777216; % 0x01000000
 k = indexVal*indexes; %256*0x01000000 for that value
 
-addVal = (k.*notes4)./fclk;
+addVal = (k.*notes4)./fclk; % calculate the value to add in phase accum
 
-roundedAddVal = round(addVal);
+roundedAddVal = round(addVal); %round
 
+%compute errors 
 factual = (roundedAddVal.*fclk)./k;
 fnoRound = (addVal.*fclk)./k;
-
-
 error = 100*((notes4-factual)./notes4);
 errorNoRound = 100*((notes4-fnoRound)./notes4);
 
+% frequency of a given add value
 factualHigh = ((53248)*fclk)/k;
 
 
@@ -67,10 +67,13 @@ writematrix(writeData,'waveSqr8.txt', 'Delimiter', 'space');
 
 %% Frequency Modulation Modeling (must run wave table gen first)
 %clear
-modulationPhase = 0:6711:4294967295; %50 hz modulation
-carrierPhase = 0:35115:4294967295; %261.63 hz carrier frequency
+% this section has outdated vals due to new fclk
+
+modulationPhase = 0:53687:4294967295; %50 hz modulation
+carrierPhase = 0:280923:4294967295; %261.63 hz carrier frequency
 totalTime = 3200000; % total samples/clocks % i is a clock cycle basically 
-time = (0:1/32000000:0.1-1/32000000)*1000; %time in ms
+time = (0:1/4000000:0.1-1/4000000)*1000; %time in ms
+
 %Generate modulation and carrier (for plotting) waveform 
 modAccum(1) = 0;
 carAccumPlt(1) = 0;
@@ -78,6 +81,7 @@ for i = 2:totalTime %this for loop calculates the accumulator value at every tim
     modAccum(i) = mod((modAccum(i-1)+6711), 4294967295); %50 hz modulation
     carAccumPlt(i) = mod((carAccumPlt(i-1) + 35115), 4294967295); %200 hz carrier 
 end
+
 %calculate wave table index, top 8 bits of phaseAccum (add 1 because matlab
 %indexes at 1 
 indexMod = bitshift(modAccum, -24)+1;
@@ -97,11 +101,14 @@ for i = 2:totalTime
 end
 indexSig = bitshift(signalAccum, -24)+1;
 
+%use wavetable to find values of curve
 for i = 1:totalTime
     valsSig(i) = waveTableSin(indexSig(i));
 end
 
-plot(time, valsSig)
+%% plot generated FM
+time = (0:1/4000000:0.1-1/4000000)*1000; %time in ms
+plot(time, valsSig, 'LineWidth', 2)
 hold on
 plot(time, valsMod)
 plot(time, valsCarPlt)
@@ -111,47 +118,10 @@ legend("Generated Signal", "Modulation Wave (50 Hz)", "Carrier Wave (c4 @ 261.63
 ylabel("8bit Voltage for DAC")
 xlabel("time (ms)")
 
-%% ADS simulation
-
-% 0-63 63 ~ 1 second num clocks close to 1 second
-% A is num clocks between change 
-% A * 2^preshift * 1/step * clk period = total time
-% start with preshift = 0;
-A = 30; 
-step = 0.01;
-D = 15;
-S = 60;
-SActual = bitshift(S, -3);
-time = 100000;
-
-impulse = uint16(zeros(time, 1) + 4095);
-% upper 4 bits ignore double shift at end...
-
-t = 0:1/time:1-1/time;
-
-mulVal = 0;
-
-totalAttack = 30*(1/step);
-
-for i = 1:time
-    if (i < 3000)
-    if (mod(i, A) == 0) 
-        mulVal = mulVal + step;
-    end
-    end
-    final(i) = impulse(i) * mulVal;
-end
-
-final12bit = bitshift(bitshift(final, 4), -4);
-plot(final12bit)
-
-% A and D describe time between shifts, S determines the number of shifts
-% that happen during decay
-
-
-
 
 %% simulation plotter
+% place output vol .txt from top_tb into directory, 
+% this plots waveform that model sim generates 
 
 a = readmatrix("output_vol.txt", 'OutputType','char');
 text = a(2:end);
@@ -160,88 +130,7 @@ plot(data);
 
 
 
-%% 12 bits for 12 bit spi dac not needed if using FIR through MAC 
-%
-
-
-clear
-t = 0:0.00024414062:1;
-table = uint16(2047*sin(2*pi*t) + 2047);
-column = table';
-plot(table)
-writeData = dec2hex(column(1:4096));
-writematrix(writeData,'wave12.txt', 'Delimiter', 'space');
-
-
-%% phase accumulator calculator 12 bit
-
-notes4 = [30 50 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88];
-fclk = 12000000; %16m?
-indexes = 4096;
-indexVal = 16777216; % 0x01000000
-k = indexVal*indexes; %4096*0x01000000 for that value
-
-addVal = (k.*notes4)./fclk;
-
-roundedAddVal = round(addVal);
-
-factual = (roundedAddVal.*fclk)./k;
-fnoRound = (addVal.*fclk)./k;
-
-error = 100*((notes4-factual)./notes4);
-errorNoRound = 100*((notes4-fnoRound)./notes4);
-
-factualLow = round((200000*fclk)/k);
-
-
-%% Testing 
-data = [151, 
-104, 
-40, 
-249, 
-186, 
-123, 
-92, 
-12, 
-189, 
-45, 
-222, 
-94, 
-207, 
-47, 
-127, 
-175, 
-223, 
-239, 
-239, 
-223, 
-175, 
-95, 
-14, 
-174, 
-61, 
-189, 
-44, 
-139, 
-235, 
-42, 
-121, 
-184, 
-248, 
-39, 
-102, 
-149, 
-212, 
-228, 
-51, 
-130, 
-226, 
-81, 
-209];
-
-plot(data)
-
-%% not helpful?
+%% Unused or deprecated things
 %{
 clear
 sysClock = 10000;
@@ -297,5 +186,76 @@ for clk = 1:1600000
     phaseIndex = bitshift(accumulator, -24)+1;
     finalVals(clk) = table(phaseIndex);
 end
+
+
+%% ADS simulation
+
+% 0-63 63 ~ 1 second num clocks close to 1 second
+% A is num clocks between change 
+% A * 2^preshift * 1/step * clk period = total time
+% start with preshift = 0;
+A = 30; 
+step = 0.01;
+D = 15;
+S = 60;
+SActual = bitshift(S, -3);
+time = 100000;
+
+impulse = uint16(zeros(time, 1) + 4095);
+% upper 4 bits ignore double shift at end...
+
+t = 0:1/time:1-1/time;
+
+mulVal = 0;
+
+totalAttack = 30*(1/step);
+
+for i = 1:time
+    if (i < 3000)
+    if (mod(i, A) == 0) 
+        mulVal = mulVal + step;
+    end
+    end
+    final(i) = impulse(i) * mulVal;
+end
+
+final12bit = bitshift(bitshift(final, 4), -4);
+plot(final12bit)
+
+% A and D describe time between shifts, S determines the number of shifts
+% that happen during decay
+
+%% 12 bits for 12 bit spi dac not needed if using FIR through MAC 
+%
+
+
+clear
+t = 0:0.00024414062:1;
+table = uint16(2047*sin(2*pi*t) + 2047);
+column = table';
+plot(table)
+writeData = dec2hex(column(1:4096));
+writematrix(writeData,'wave12.txt', 'Delimiter', 'space');
+
+%% phase accumulator calculator 12 bit
+
+notes4 = [30 50 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88];
+fclk = 12000000; %16m?
+indexes = 4096;
+indexVal = 16777216; % 0x01000000
+k = indexVal*indexes; %4096*0x01000000 for that value
+
+addVal = (k.*notes4)./fclk;
+
+roundedAddVal = round(addVal);
+
+factual = (roundedAddVal.*fclk)./k;
+fnoRound = (addVal.*fclk)./k;
+
+error = 100*((notes4-factual)./notes4);
+errorNoRound = 100*((notes4-fnoRound)./notes4);
+
+factualLow = round((200000*fclk)/k);
+
 
 %}
