@@ -1,4 +1,9 @@
-
+/*
+Kevin Box and Eli Reijto
+December 7 2023
+kbox@hmc.edu
+erejto@hmc.edu 
+*/ 
 #include "STM32L432KC_ADC.h"
 
 #define ADC_CHANNELS 4 //4 channels
@@ -34,42 +39,19 @@ void ADC_init(void){
   ADC1 -> SQR1 |= 0x9 << ADC_SQR1_SQ3_Pos; // convert channel 10, PA4 third
   ADC1 -> SQR1 |= 0x8 << ADC_SQR1_SQ4_Pos; // convert channel 11, PA3 fourth
 
-
-
-
   // begin calibration
   ADC1->CR &= ~(ADC_CR_ADCALDIF);
   ADC1->CR |= ADC_CR_ADCAL;
 
   // Wait for ADCAL to read 0
   while (ADC1->CR & ADC_CR_ADCAL);
-
-
-  //ADC1->SMPR1 &= ~ADC_SMPR1_SMP1_Msk; //clear SMPR1
-  //ADC1->SMPR1 |= _VAL2FLD(ADC_SMPR1_SMP1, 0b001); //Sampling @80 MHz and 12.5 ADC clock cycles
-
-  // Set to overun last data
-  // ADC1->CFGR |= ADC_CFGR_OVRMOD;
-
-  // clear
-  //ADC1->ISR |= ADC_ISR_ADRDY;
+  
   // enable adc
   ADC1 -> CR |= ADC_CR_ADEN;
   //wait until ready
   while(!(ADC1 -> ISR &= 1 << ADC_ISR_ADRDY_Pos));
 
-  // Clear ready by writing 1
-   //ADC1->ISR |= ADC_ISR_ADRDY;
-
- 
- 
   // set unsigned data offset is off by default
-  
-
-  
-  
- 
-  
 }
 
 

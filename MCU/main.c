@@ -6,7 +6,11 @@
 -------------------------- END-OF-HEADER -----------------------------
 
 File    : main.c
-Purpose : Generic application start
+Purpose : Implements inputs and spi send for the FPGA Sythesizer
+Kevin Box and Eli Reijto
+December 7 2023
+kbox@hmc.edu
+erejto@hmc.edu 
 
 */
 
@@ -34,7 +38,7 @@ int main(void) {
   RCC->CR |= RCC_CR_MSIRGSEL;
   RCC->CR |= 1; // MSI ON
 
-
+  // enable tim for delays
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
   initTIM(TIM15);
 
@@ -70,10 +74,6 @@ int main(void) {
   
   // Read values 
   ADC_read(adcRead);
-  printf("1st, %d     ", adcRead[0]); // PA3
-  printf("2nd, %d     ", adcRead[1]); // PA4
-  printf("3rd, %d     ", adcRead[2]); // PA5
-  printf("4th, %d     \n", adcRead[3]); // PA6
 
   // if either FM setting changes update them on FPGA
   if (adcRead[2] != adcSaved[2] || adcRead[3] != adcSaved[3]) { 
@@ -126,39 +126,11 @@ int main(void) {
     // SPI send note
     playNote(sendVal);
 
-    //
+    // unset update
     updateNote = false;
   }
 
   } while(1);
-
-/*
-  do {
-  uint32_t delay = 1;
-  uint16_t note = 0x0000;
-  delay_millis(TIM15, delay);
-  note = 0x0100;
-  playNote(note);
-  } while(1);
-  
-
-  do {
-  uint32_t delay = 5000;
-  uint16_t note = 0x0000;
-  delay_millis(TIM15, delay);
-  delay_millis(TIM15, 100);
-  note = 0x0100;
-  playNote(note);
-  
-  do {
-  ADC_read(result);
-  printf("1st, %d     ", result[0]); // PA3
-  printf("2nd, %d     ", result[1]); // PA4
-  printf("3rd, %d     ", result[2]); // PA5
-  printf("4th, %d     \n", result[3]); // PA6
-  } while(1);
-
-}while (1); */
 }
 
 /*************************** End of file ****************************/

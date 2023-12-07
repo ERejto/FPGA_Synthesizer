@@ -1,9 +1,17 @@
+/*
+Kevin Box and Eli Reijto
+December 7 2023
+kbox@hmc.edu
+erejto@hmc.edu 
+*/
+
 #include "STM32L432KC.h"
+
 
 // recursive 16 -> 4 encoder
 uint8_t encoder(uint16_t vals) {
- if (vals == 0) return 0;
- else return 1 + encoder(vals>>1);
+ if (vals == 0) return 0; // base case if zero return zero
+ else return 1 + encoder(vals>>1); // if non zero count the shift and get encoded val of left shift.
 }
 //Cant use :
 /*
@@ -33,6 +41,7 @@ PA0
 PA1
 PA2
 */
+
 void button_init(void) {
   gpioEnable(PA0);
   pinMode(PA0,GPIO_INPUT); 
@@ -96,7 +105,10 @@ PB7 = B4
 
 
 void button_read(uint16_t *notesRead){
+ // reset read to zero
   notesRead[0] = 0;
+
+  // read button and set correct bit
   if (!digitalRead(PA0)){
     notesRead[0] |= 1<<0;
   }
