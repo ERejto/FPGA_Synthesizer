@@ -24,14 +24,9 @@ Purpose : Generic application start
 *  Function description
 *   Application entry point.
 */
-<<<<<<< HEAD
- int main(void) {
-   
-=======
 int main(void) {
   gpioEnable(GPIO_PORT_A);
   GPIOB -> PUPD
->>>>>>> 6af40590bf985ed398c7eb40ff9c2bf6d381391c
   RCC->CR &= 1; // MSI off
   RCC->CR &= ~(0xF<<4);
   RCC->CR |= RCC_CR_MSIRANGE_8; //increase clocking 16M?
@@ -40,19 +35,9 @@ int main(void) {
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
   initTIM(TIM15);
   RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN | RCC_AHB2ENR_GPIOBEN | RCC_AHB2ENR_GPIOCEN);
-<<<<<<< HEAD
-  //DAC_init();
-  //char address = 0x40;
- // uint8_t state = 0; // wait = 0; playing = 1;
-  //char note = 0;
-
-/*
-SPI TEST CODE
-=======
   ADC_init();
   uint16_t adcRead[4];
   uint16_t adcSaved[4];
->>>>>>> 6af40590bf985ed398c7eb40ff9c2bf6d381391c
   // "clock divide" = master clock frequency / desired baud rate
   // the phase for the SPI clock is 1 and the polarity is 0
   initSPI(1, 0, 0);
@@ -74,48 +59,6 @@ SPI TEST CODE
   // Read values 
   ADC_read(adcRead);
 
-<<<<<<< HEAD
-*/
-
-/*
-ADC TEST CODE
-  int data;
-  gpioEnable(PA8);
-  pinMode(PA8,GPIO_OUTPUT);
-  ADC_init();
-  while (1){
-    data = ADC_read();
-    if (data > 100){
-      digitalWrite(PA8,1);
-    }
-  } 
-}
-*/
-
-  
-  gpioEnable(PA8);
-  pinMode(PA8,GPIO_OUTPUT);
-  gpioEnable(PB1);
-  pinMode(PB1,GPIO_OUTPUT);
-  uint8_t data;
-  I2C_init();
-  button_init();
-
-  I2C_setup_peripheral();
-  I2C_select_register(GPIO_REGISTER);
-  while(1){
-    data = I2C_read_byte();
-    printf("Data: %d", data);
-    if (data == 0x80){
-      digitalWrite(PA8,PIO_HIGH);
-    }
-    else if (data == 0x40){
-      digitalWrite(PB1,PIO_HIGH);
-    }
-   }
-                                                       
-
-=======
   // if either FM setting changes update them on FPGA
   if (adcRead[2] != adcSaved[2] || adcRead[3] != adcSaved[3]) { 
 
@@ -200,7 +143,6 @@ ADC TEST CODE
   } while(1);
 
 }while (1); */
->>>>>>> 6af40590bf985ed398c7eb40ff9c2bf6d381391c
 }
 
 /*************************** End of file ****************************/
