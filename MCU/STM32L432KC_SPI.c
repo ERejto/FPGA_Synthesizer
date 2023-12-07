@@ -38,7 +38,7 @@ void initSPI(int br, int cpol, int cpha) {
     SPI1->CR1 &= ~(SPI_CR1_CPOL | SPI_CR1_CPHA | SPI_CR1_LSBFIRST | SPI_CR1_SSM);
     SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPHA, cpha);
     SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPOL, cpol);
-    SPI1->CR2 |= _VAL2FLD(SPI_CR2_DS, 0b0111);
+    SPI1->CR2 |= _VAL2FLD(SPI_CR2_DS, 0b1111);
     SPI1->CR2 |= (SPI_CR2_FRXTH | SPI_CR2_SSOE);
 
     SPI1->CR1 |= (SPI_CR1_SPE); // Enable SPI
@@ -47,10 +47,10 @@ void initSPI(int br, int cpol, int cpha) {
 /* Transmits a character (1 byte) over SPI and returns the received character.
  *    -- send: the character to send over SPI
  *    -- return: the character received over SPI */
-char spiSendReceive(char send) {
+uint16_t spiSendReceive(uint16_t send) {
     while(!(SPI1->SR & SPI_SR_TXE)); // Wait until the transmit buffer is empty
-    *(volatile char *) (&SPI1->DR) = send; // Transmit the character over SPI
+    *(volatile uint16_t *) (&SPI1->DR) = send; // Transmit the character over SPI
     while(!(SPI1->SR & SPI_SR_RXNE)); // Wait until data has been received
-    char rec = (volatile char) SPI1->DR;
+    uint16_t rec = (volatile uint16_t) SPI1->DR;
     return rec; // Return received character
 }

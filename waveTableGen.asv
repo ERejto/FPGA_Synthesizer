@@ -26,7 +26,7 @@ fnoRound = (addVal.*fclk)./k;
 error = 100*((notes4-factual)./notes4);
 errorNoRound = 100*((notes4-fnoRound)./notes4);
 
-factualHigh = ((53248)*fclk)/k;
+factualHigh = ((52224)*fclk)/k;
 
 
 %% wave table gen 

@@ -20,6 +20,7 @@
 #include "STM32L432KC_SPI.h"
 #include "STM32L432KC_DAC.h"
 #include "STM32L432KC_I2C.h"
+#include "STM32L432KC_ADC.h"
 
 // Global defines
 
