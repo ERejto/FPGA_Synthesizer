@@ -8,10 +8,6 @@
 //Sets up ADC with proper settings
 void ADC_init(void){
   // enable pins for GPIO
-  pinMode(PA0, GPIO_ANALOG); // channel 5
-  pinMode(PA1, GPIO_ANALOG); // channel 6
-  pinMode(PA2, GPIO_ANALOG); // channel 7
-  pinMode(PA7, GPIO_ANALOG); // channel 8
   pinMode(PA3, GPIO_ANALOG); // channel 5
   pinMode(PA4, GPIO_ANALOG); // channel 6
   pinMode(PA5, GPIO_ANALOG); // channel 7

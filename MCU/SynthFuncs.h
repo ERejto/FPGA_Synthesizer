@@ -4,7 +4,7 @@
 #include <stm32l432xx.h>
 
 // recursive encoder that finds the MSB
-uint8_t encoder(uint8_t vals);
+uint8_t encoder(uint16_t vals);
 
 //Initializes button GPIO pins
 void button_init(void);

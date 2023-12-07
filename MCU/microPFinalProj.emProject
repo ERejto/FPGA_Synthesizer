@@ -69,12 +69,20 @@
       <file file_name="STM32L432KC_ADC.h" />
       <file file_name="STM32L432KC_DAC.c" />
       <file file_name="STM32L432KC_DAC.h" />
-      <file file_name="STM32L432KC_FLASH.c" />
-      <file file_name="STM32L432KC_FLASH.h" />
+      <file file_name="STM32L432KC_FLASH.c">
+        <configuration Name="Debug" build_exclude_from_build="Yes" />
+      </file>
+      <file file_name="STM32L432KC_FLASH.h">
+        <configuration Name="Debug" build_exclude_from_build="Yes" />
+      </file>
       <file file_name="STM32L432KC_GPIO.c" />
       <file file_name="STM32L432KC_GPIO.h" />
-      <file file_name="STM32L432KC_I2C.c" />
-      <file file_name="STM32L432KC_I2C.h" />
+      <file file_name="STM32L432KC_I2C.c">
+        <configuration Name="Debug" build_exclude_from_build="Yes" />
+      </file>
+      <file file_name="STM32L432KC_I2C.h">
+        <configuration Name="Debug" build_exclude_from_build="Yes" />
+      </file>
       <file file_name="STM32L432KC_RCC.c" />
       <file file_name="STM32L432KC_RCC.h" />
       <file file_name="STM32L432KC_SPI.c" />

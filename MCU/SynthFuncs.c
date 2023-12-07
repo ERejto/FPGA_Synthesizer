@@ -25,7 +25,7 @@ PA10
 PA12
 PB0
 PB7
-PB6
+PB6 PC15
 PB1
 PA8
 PA7
@@ -36,40 +36,40 @@ PA2
 void button_init(void) {
   gpioEnable(PA0);
   pinMode(PA0,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD0_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD0_Pos;
   gpioEnable(PA1);
   pinMode(PA1,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD1_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD1_Pos;
   gpioEnable(PA2);
   pinMode(PA2,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD2_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD2_Pos;
   gpioEnable(PA7);
   pinMode(PA7,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD7_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD7_Pos;
   gpioEnable(PA8);
   pinMode(PA8,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD8_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD8_Pos;
   gpioEnable(PA9);
   pinMode(PA9,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD9_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD9_Pos;
   gpioEnable(PA10);
   pinMode(PA10,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD10_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD10_Pos;
   gpioEnable(PA12);
   pinMode(PA12,GPIO_INPUT); 
-  GPIOA -> PUPD |= 1 << GPIO_PUPDR_PUPD12_Pos;
+  GPIOA -> PUPDR |= 1 << GPIO_PUPDR_PUPD12_Pos;
   gpioEnable(PB0);
   pinMode(PB0,GPIO_INPUT); 
-  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD0_Pos;
+  GPIOB -> PUPDR |= 1 << GPIO_PUPDR_PUPD0_Pos;
   gpioEnable(PB1);
   pinMode(PB1,GPIO_INPUT); 
-  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD1_Pos;
+  GPIOB -> PUPDR |= 1 << GPIO_PUPDR_PUPD1_Pos;
   gpioEnable(PB6);
   pinMode(PB6,GPIO_INPUT);
-  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD6_Pos;
+  GPIOB -> PUPDR |= 1 << GPIO_PUPDR_PUPD6_Pos;
   gpioEnable(PB7);
   pinMode(PB7,GPIO_INPUT); 
-  GPIOB -> PUPD |= 1 << GPIO_PUPDR_PUPD7_Pos;
+  GPIOB -> PUPDR |= 1 << GPIO_PUPDR_PUPD7_Pos;
 }
 
 void playNote(uint16_t note) {
@@ -96,40 +96,41 @@ PB7 = B4
 
 
 void button_read(uint16_t *notesRead){
-  if (digitalRead(PA0)){
+  notesRead[0] = 0;
+  if (!digitalRead(PA0)){
     notesRead[0] |= 1<<0;
   }
-  else if(digitalRead(PA1)){
+  else if(!digitalRead(PA1)){
     notesRead[0] |= 1<<1;
   }
-  else if(digitalRead(PA2)){
+  else if(!digitalRead(PA2)){
     notesRead[0] |= 1<<2;
   }
-  else if(digitalRead(PA7)){
+  else if(!digitalRead(PA7)){
     notesRead[0] |= 1<<3;
   }
-  else if(digitalRead(PA8)){
+  else if(!digitalRead(PA8)){
     notesRead[0] |= 1<<4;
   }
-  else if(digitalRead(PA9)){
+  else if(!digitalRead(PA9)){
     notesRead[0] |= 1<<5;
   }
-  else if(digitalRead(PA10)){
+  else if(!digitalRead(PA10)){
     notesRead[0] |= 1<<6;
   }
-  else if(digitalRead(PA12)){
+  else if(!digitalRead(PA12)){
     notesRead[0] |= 1<<7;
   }
-  else if(digitalRead(PB0)){
+  else if(!digitalRead(PB0)){
     notesRead[0] |= 1<<8;
   }
-  else if(digitalRead(PB1)){
+  else if(!digitalRead(PB1)){
     notesRead[0] |= 1<<9;
   }
-  else if(digitalRead(PB6)){
+  else if(!digitalRead(PB6)){
     notesRead[0] |= 1<<10;
   }
-  else if(digitalRead(PB7)){
+  else if(!digitalRead(PB7)){
     notesRead[0] |= 1<<11;
   }
 }
