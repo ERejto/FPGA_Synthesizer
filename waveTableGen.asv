@@ -9,8 +9,8 @@
 
 %% phase accumulator calculator
 
-notes4 = [50 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88 1000];
-fclk = 24000000; %16m? no 24 M
+notes4 = [10 65 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88 1000];
+fclk = 4000000; %16m? no 24 M
 indexes = 256;
 indexVal = 16777216; % 0x01000000
 k = indexVal*indexes; %256*0x01000000 for that value
@@ -22,10 +22,11 @@ roundedAddVal = round(addVal);
 factual = (roundedAddVal.*fclk)./k;
 fnoRound = (addVal.*fclk)./k;
 
+
 error = 100*((notes4-factual)./notes4);
 errorNoRound = 100*((notes4-fnoRound)./notes4);
 
-factualHigh = round((200000*fclk)/k);
+factualHigh = ((52224)*fclk)/k;
 
 
 %% wave table gen 
@@ -152,8 +153,8 @@ plot(final12bit)
 
 %% simulation plotter
 
-a = readtable("output_vol.csv");
-text = ;
+a = readmatrix("output_vol.txt", 'OutputType','char');
+text = a(2:end);
 data = hex2dec(text);
 plot(data);
 
@@ -172,10 +173,10 @@ writeData = dec2hex(column(1:4096));
 writematrix(writeData,'wave12.txt', 'Delimiter', 'space');
 
 
-%% phase accumulator calculator
+%% phase accumulator calculator 12 bit
 
-notes4 = [261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88];
-fclk = 32000000; %16m?
+notes4 = [30 50 261.63 277.18 293.66 311.13 329.63 349.23 369.99 392 415.30 440 466.16 493.88];
+fclk = 12000000; %16m?
 indexes = 4096;
 indexVal = 16777216; % 0x01000000
 k = indexVal*indexes; %4096*0x01000000 for that value
