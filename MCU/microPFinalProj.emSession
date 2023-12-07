@@ -46,7 +46,7 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never">
-   <Watchpoint expression="readVal" name="readVal" radix="16" linenumber="0" filename=""/>
+   <Watchpoint expression="readVal" name="readVal" radix="16" linenumber="0" filename="../MCU"/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -59,13 +59,16 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="32" useTextEdit="1" path="main.c" left="0" selected="1" top="6" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_SPI.c" left="0" top="33" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="32" useTextEdit="1" path="lib/STM32L432KC_SPI.h" left="0" top="4" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_GPIO.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="87" useTextEdit="1" path="lib/STM32L432KC_GPIO.h" left="0" top="77" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="71" y="24" useTextEdit="1" path="stm32l4xx_hal_driver/Src/stm32l4xx_hal_adc_ex.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" path="STM32L432KC_SPI.c" left="0" top="23" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="25" useTextEdit="1" path="main.c" left="0" selected="1" top="68" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" path="STM32L432KC_SPI.c" left="0" top="20" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_GPIO.c" left="0" top="69" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="30" useTextEdit="1" path="STM32L432KC_ADC.c" left="0" top="2" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="12" useTextEdit="1" path="SynthFuncs.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="22" y="11" useTextEdit="1" path="STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L432KC_GPIO.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="33" y="64" useTextEdit="1" path="STM32L432KC_I2C.c" left="0" top="48" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="5" useTextEdit="1" path="STM32L432KC_I2C.h" left="0" top="0" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="microPFinalProj" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/Users/kevmanbox/Desktop/FPGA_Synthesizer/MCU" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

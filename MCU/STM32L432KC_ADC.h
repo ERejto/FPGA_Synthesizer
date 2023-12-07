@@ -9,6 +9,6 @@ void ADC_init(void);
 
 
 //Writes Value to the DAC_Out2 pin PA5 through a buffer
-void ADC_read(int8_t Value);
+uint16_t ADC_read(void);
 
 #endif

@@ -6,6 +6,8 @@ char encoder(char vals) {
  else return 1 + encoder(vals>>1);
 }
 
+
+//
 void playNote(char note) {
   char readVal = spiSendReceive(note);
   DAC_write(readVal);
