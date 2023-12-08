@@ -65,6 +65,11 @@ columnSqr= waveTableSqr';
 writeData = dec2hex(columnSqr(1:256));
 writematrix(writeData,'waveSqr8.txt', 'Delimiter', 'space');
 
+%% Creating musical nont waves
+
+[55 39 34 38 27 42 15 10 4 31 ]
+
+
 %% Frequency Modulation Modeling (must run wave table gen first)
 %clear
 % this section has outdated vals due to new fclk
@@ -107,7 +112,7 @@ for i = 1:totalTime
 end
 
 %% plot generated FM
-time = (0:1/4000000:0.1-1/4000000)*1000; %time in ms
+time = (0:1/32000000:0.1-1/32000000)*1000; %time in ms
 plot(time, valsSig, 'LineWidth', 2)
 hold on
 plot(time, valsMod)
