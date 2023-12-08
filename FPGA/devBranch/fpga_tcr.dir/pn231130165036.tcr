@@ -1,0 +1,21 @@
+#Start recording tcl command: 11/30/2023 15:34:09
+#Project Location: C:/Users/kbox/Desktop/FPGA/fpga; Project name: fpga
+prj_open "C:/Users/kbox/Desktop/FPGA/fpga/fpga.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/kbox/Desktop/FPGA/fpga/multMAC/multMAC.ipx"
+prj_disable_source "C:/Users/kbox/Desktop/FPGA/fpga/adderMac/adderMac.ipx"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/30/2023 16:50:36

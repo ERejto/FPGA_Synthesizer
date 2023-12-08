@@ -1,0 +1,805 @@
+m255
+K4
+z2
+!s11f vlog 2021.4 2021.10, Oct 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/kbox/Desktop/FPGA/fpga
+vadderMac
+Z1 !s125 LATTICE_CONN
+Z2 !s110 1701235456
+!i10b 1
+!s100 HAQXgnoGafina?UXKZ5ic1
+I;kkgHd7`DFWX_GJnO<7@G0
+R0
+Z3 w1701235155
+Z4 8C:/Users/kbox/Desktop/FPGA/fpga/adderMac/rtl/adderMac.v
+Z5 FC:/Users/kbox/Desktop/FPGA/fpga/adderMac/rtl/adderMac.v
+!i122 72
+L0 11 33
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OT;L;2021.4;73
+r1
+!s85 0
+31
+Z8 !s108 1701235456.000000
+Z9 !s107 C:/Users/kbox/Desktop/FPGA/fpga/adderMac/rtl/adderMac.v|
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/fpga/adderMac/rtl/adderMac.v|
+!s101 -O0
+!i113 1
+Z11 o-work work -O0
+Z12 tCvgOpt 0
+nadder@mac
+vadderMac_ipgen_lscc_adder
+R2
+!i10b 1
+!s100 XW]ZWh99VbFRlJ<l9Y]6@3
+Ib7H3<5m6;l^EMNJU9mB872
+R0
+R3
+R4
+R5
+!i122 72
+L0 103 298
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+nadder@mac_ipgen_lscc_adder
+vmac16x16x32
+Z13 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R1
+Z14 !s110 1701391030
+!i10b 1
+!s100 8mO5cAT;h?2P6;l3_;ege1
+I3Y]JGHZ<I0=e>U^OeknW03
+S1
+R0
+Z15 w1701390759
+Z16 8C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/waveFetcher.sv
+Z17 FC:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/waveFetcher.sv
+!i122 212
+L0 125 77
+R6
+R7
+r1
+!s85 0
+31
+Z18 !s108 1701391030.000000
+Z19 !s107 C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/waveFetcher.sv|
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/waveFetcher.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vmac16x16x32FM
+R13
+R1
+Z21 !s110 1701949615
+!i10b 1
+!s100 Ro8`ZLWXfZJKGCFU_izP63
+I^and=0LKT:zTQzI_`@=>01
+S1
+Z22 dC:/Users/kbox/Desktop/FPGA/devBranch
+Z23 w1701838818
+Z24 8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+Z25 FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+!i122 456
+L0 117 77
+R6
+R7
+r1
+!s85 0
+31
+Z26 !s108 1701949615.000000
+Z27 !s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv|
+Z28 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nmac16x16x32@f@m
+vmemory
+R13
+Z29 !s110 1701949614
+!i10b 1
+!s100 dXiHIhg4f=?ONF9M@ZTAd0
+IP73@S<J>@lDUaDaIYT[P10
+S1
+R22
+w1701808389
+8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+!i122 448
+L0 1 50
+R6
+R7
+r1
+!s85 0
+31
+Z30 !s108 1701949614.000000
+!s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vmemory_tb
+R13
+R29
+!i10b 1
+!s100 J?B5ezIogTbL:^J1nRW_j0
+I?BTKnF;UR67JDU`CV_lm40
+S1
+R22
+w1701293030
+8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+!i122 449
+L0 6 55
+R6
+R7
+r1
+!s85 0
+31
+R30
+!s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vmodulationGenerator
+R13
+R14
+!i10b 1
+!s100 ?2V4AefZmSIWbjW2YaD7m3
+IJQT>kEUELfTJdA5ZEn@e?1
+S1
+R0
+R15
+R16
+R17
+!i122 212
+L0 72 14
+R6
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+!i113 1
+R11
+R12
+nmodulation@generator
+vmodulationGeneratorFM
+R13
+R21
+!i10b 1
+!s100 e<k]MjMg?[c7=EX5z42<?2
+I186cbDJ2hlNfTl^zWe1[a0
+S1
+R22
+R23
+R24
+R25
+!i122 456
+L0 73 15
+R6
+R7
+r1
+!s85 0
+31
+R26
+R27
+R28
+!s101 -O0
+!i113 1
+R11
+R12
+nmodulation@generator@f@m
+vmultMAC
+R1
+Z31 !s110 1701235463
+!i10b 1
+!s100 O`RoEOUG`^VEWN3Yn[@X[3
+ISmmW?B[zLPQ1g2@mFG3F^2
+R0
+Z32 w1701235177
+Z33 8C:/Users/kbox/Desktop/FPGA/fpga/multMAC/rtl/multMAC.v
+Z34 FC:/Users/kbox/Desktop/FPGA/fpga/multMAC/rtl/multMAC.v
+!i122 73
+L0 11 29
+R6
+R7
+r1
+!s85 0
+31
+Z35 !s108 1701235463.000000
+Z36 !s107 C:/Users/kbox/Desktop/FPGA/fpga/multMAC/rtl/multMAC.v|
+Z37 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/fpga/multMAC/rtl/multMAC.v|
+!s101 -O0
+!i113 1
+R11
+R12
+nmult@m@a@c
+vmultMAC_ipgen_lscc_multiplier
+R31
+!i10b 1
+!s100 eAjQR1NVb6B`KHAN^TGDD0
+I3jDoMXfKIVgi5?HI16ARC2
+R0
+R32
+R33
+R34
+!i122 73
+L0 99 92
+R6
+R7
+r1
+!s85 0
+31
+R35
+R36
+R37
+!s101 -O0
+!i113 1
+R11
+R12
+nmult@m@a@c_ipgen_lscc_multiplier
+vmultMAC_ipgen_lscc_multiplier_dsp
+R31
+!i10b 1
+!s100 GnNO20Q`>:O^_G>82^XfP0
+I5Q]jbeT0DjPOR1FmT<OfN1
+R0
+R32
+R33
+R34
+!i122 73
+L0 455 252
+R6
+R7
+r1
+!s85 0
+31
+R35
+R36
+R37
+!s101 -O0
+!i113 1
+R11
+R12
+nmult@m@a@c_ipgen_lscc_multiplier_dsp
+vmultMAC_ipgen_lscc_multiplier_lut
+R31
+!i10b 1
+!s100 eJdRLgYR[c=V_coTh^NdO3
+I?5JOm6XdDJYUMcPoGb?Co1
+R0
+R32
+R33
+R34
+!i122 73
+L0 197 252
+R6
+R7
+r1
+!s85 0
+31
+R35
+R36
+R37
+!s101 -O0
+!i113 1
+R11
+R12
+nmult@m@a@c_ipgen_lscc_multiplier_lut
+vphaseAccumulator
+R13
+R21
+!i10b 1
+!s100 G[A>i^ZRhSdkI>>VOKHDS2
+IzmMo:jb]WQf?RDc9[?h2=1
+S1
+R22
+Z38 w1701544465
+Z39 8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+Z40 FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+!i122 454
+Z41 L0 14 57
+R6
+R7
+r1
+!s85 0
+31
+R30
+Z42 !s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv|
+Z43 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nphase@accumulator
+vphaseAccumulatorFM
+R13
+R21
+!i10b 1
+!s100 Y^C[?_Z8l5ADn_1015EzU2
+I[S[?PklO?B2D5]A4Nc?7S0
+S1
+R22
+R23
+R24
+R25
+!i122 456
+R41
+R6
+R7
+r1
+!s85 0
+31
+R26
+R27
+R28
+!s101 -O0
+!i113 1
+R11
+R12
+nphase@accumulator@f@m
+vspi
+R13
+!s110 1699230271
+!i10b 1
+!s100 `ah9`[<5oJTacmXPP@=ge3
+IJM=3bI`XazV[K[K>Fd8[]3
+S1
+R0
+w1699230260
+8C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/spi.sv
+FC:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/spi.sv
+!i122 29
+L0 1 42
+R6
+R7
+r1
+!s85 0
+31
+!s108 1699230271.000000
+!s107 C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/spi.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/spi.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vspiDac
+R13
+R29
+!i10b 1
+!s100 LdBV:UP0:z25jR;_N[XGJ3
+IOSE=e7S:N[KjzXfIQ@a2L0
+S1
+R22
+Z44 w1701819462
+Z45 8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+Z46 FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+!i122 450
+L0 67 89
+R6
+R7
+r1
+!s85 0
+31
+R30
+Z47 !s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv|
+Z48 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nspi@dac
+vspiDac_tb
+R13
+R29
+!i10b 1
+!s100 TNZmTQ]C7:9F:bQS^kKg]0
+IFBj7]NKPNg<c2`::248G40
+S1
+R22
+Z49 w1701246986
+Z50 8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+Z51 FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+!i122 451
+L0 58 37
+R6
+R7
+r1
+!s85 0
+31
+R30
+Z52 !s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv|
+Z53 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nspi@dac_tb
+vspiMcu
+R13
+R29
+!i10b 1
+!s100 5JmFX_cR;<zZHC8eG=^M]0
+Ia?R2[?^[FCG=AaM=lf6db2
+S1
+R22
+R44
+R45
+R46
+!i122 450
+L0 2 28
+R6
+R7
+r1
+!s85 0
+31
+R30
+R47
+R48
+!s101 -O0
+!i113 1
+R11
+R12
+nspi@mcu
+vspiMcu_tb
+R13
+R29
+!i10b 1
+!s100 hRWocQz=`35JTh87fV2OD3
+IVHGCaBYn_`TR`]3ON2]?^1
+S1
+R22
+R49
+R50
+R51
+!i122 451
+L0 9 45
+R6
+R7
+r1
+!s85 0
+31
+R30
+R52
+R53
+!s101 -O0
+!i113 1
+R11
+R12
+nspi@mcu_tb
+vtimingCtrl
+R13
+R29
+!i10b 1
+!s100 6@3@n5eV]@8bD63:aR?2B1
+IEkL7e>z^DHCZboklfDbiT2
+S1
+R22
+Z54 w1701817324
+Z55 8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+Z56 FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+!i122 452
+L0 35 16
+R6
+R7
+r1
+!s85 0
+31
+R30
+Z57 !s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv|
+Z58 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+ntiming@ctrl
+vtop
+R13
+R29
+!i10b 1
+!s100 RScDLGoMcQXUAD9Chh@gf0
+IiE0GEghD[=:AcTHVbHA0F1
+S1
+R22
+R54
+R55
+R56
+!i122 452
+L0 1 33
+R6
+R7
+r1
+!s85 0
+31
+R30
+R57
+R58
+!s101 -O0
+!i113 1
+R11
+R12
+vtop_tb
+R13
+R29
+!i10b 1
+!s100 IQc9bhh=iTM5G:6LiU[D50
+IG43841K?0zgfc<?CeKR9b0
+S1
+R22
+w1701949151
+8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+!i122 453
+L0 3 159
+R6
+R7
+r1
+!s85 0
+31
+R30
+!s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vwaveFetcher
+R13
+R1
+R21
+!i10b 1
+!s100 PKomU>Soz?J?eH6M5F4gc1
+IR?l4OPjZeVMVz06P4>P:Y3
+S1
+R22
+R38
+R39
+R40
+!i122 454
+Z59 L0 1 11
+R6
+R7
+r1
+!s85 0
+31
+R30
+R42
+R43
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@fetcher
+vwaveFetcher_tb
+R13
+R21
+!i10b 1
+!s100 P3KhTMLXGVAlUmV[bnHKb1
+IV8c:NRb_fZP1l<j2a5V^:3
+S1
+R22
+w1699223207
+8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+!i122 455
+L0 16 33
+R6
+R7
+r1
+!s85 0
+31
+R26
+!s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@fetcher_tb
+vwaveFetcherFM
+R13
+R1
+R21
+!i10b 1
+!s100 0e7TXHVCmfS8Um^gmWGdG3
+IcAWki^TgKFQPNnK0IdVbK3
+S1
+R22
+R23
+R24
+R25
+!i122 456
+R59
+R6
+R7
+r1
+!s85 0
+31
+R26
+R27
+R28
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@fetcher@f@m
+vwaveSaw
+R13
+R21
+!i10b 1
+!s100 G`ib@aYE<i@LC2<4bJ2d62
+I6`7TAjClCgn<N4>lWa]l`0
+S1
+R22
+Z60 w1701949606
+Z61 8C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+Z62 FC:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+!i122 457
+L0 43 11
+R6
+R7
+r1
+!s85 0
+31
+R26
+!s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv|
+Z63 !s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@saw
+vwaveSin
+R13
+R21
+!i10b 1
+!s100 oaPzOFO?mQzEzAD3]VGQm1
+Iej?AzFfnWc=?43f]Il7R?1
+S1
+R22
+R60
+R61
+R62
+!i122 457
+L0 31 11
+R6
+R7
+r1
+!s85 0
+31
+R26
+Z64 !s107 C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv|
+R63
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@sin
+vwaveSqr
+R13
+R21
+!i10b 1
+!s100 6zoeVC46iQ@9_CQ7D7Qf01
+I=Sklz^VhafHdS<W7H_;i02
+S1
+R22
+R60
+R61
+R62
+!i122 457
+L0 55 11
+R6
+R7
+r1
+!s85 0
+31
+R26
+R64
+R63
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@sqr
+vwaveTable
+R13
+R21
+!i10b 1
+!s100 20US<d3KSJYQ]MJ[J0nT_0
+I?<FjO[f_dQo9]HnG3FRla1
+S1
+R22
+R60
+R61
+R62
+!i122 457
+L0 1 29
+R6
+R7
+r1
+!s85 0
+31
+R26
+R64
+R63
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@table
+vwaveTableFM
+R13
+!s110 1701644208
+!i10b 1
+!s100 ;nJTgWn[_bZk]7JZLSHDD1
+Ig_DCT4AXFDZ2@zVj:dClK0
+S1
+dC:/Users/kbox/Desktop/FPGA/testBranch
+w1701636048
+8C:/Users/kbox/Desktop/FPGA/testBranch/source/impl_1/waveFetcherFM.sv
+FC:/Users/kbox/Desktop/FPGA/testBranch/source/impl_1/waveFetcherFM.sv
+!i122 388
+L0 89 11
+R6
+R7
+r1
+!s85 0
+31
+!s108 1701644208.000000
+!s107 C:/Users/kbox/Desktop/FPGA/testBranch/source/impl_1/waveFetcherFM.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/kbox/Desktop/FPGA/testBranch/source/impl_1/waveFetcherFM.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@table@f@m
+vwaveTri
+R13
+R21
+!i10b 1
+!s100 O0A:m5?KmnJkj6`8Yg8>Z1
+Ii_iDGPZ5nkYA@;@lZ;`:g3
+S1
+R22
+R60
+R61
+R62
+!i122 457
+L0 67 11
+R6
+R7
+r1
+!s85 0
+31
+R26
+R64
+R63
+!s101 -O0
+!i113 1
+R11
+R12
+nwave@tri

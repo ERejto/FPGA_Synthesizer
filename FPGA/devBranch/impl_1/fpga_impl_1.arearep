@@ -1,0 +1,209 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  288 of 5280 (5.455%)
+I/O cells:      16
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        65          100.0
+                            FD1P3XZ       288          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         4          100.0
+                                INV         1          100.0
+                               LUT4       512          100.0
+                              MAC16         2          100.0
+                                 OB        12          100.0
+SUB MODULES
+                           adderMac         1
+adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP")         1
+                      mac16x16x32FM         1
+                             memory         1
+              modulationGeneratorFM         1
+                            multMAC         1
+multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off")         1
+                 phaseAccumulatorFM         1
+                             spiDac         1
+                             spiMcu         1
+                         timingCtrl         1
+                      waveFetcherFM         1
+                            waveSin         1
+                         waveSin_U0         1
+                          waveTable         1
+                       waveTable_U1         1
+                              TOTAL       902
+----------------------------------------------------------------------
+Report for cell timingCtrl.v1
+Instance Path : clkGen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                         HSOSC_CORE         1          100.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell spiMcu.v1
+Instance Path : readMCU
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        16            5.6
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell spiDac.v1
+Instance Path : toSpeak
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        33           11.5
+                               LUT4        45            8.8
+                              TOTAL        78
+----------------------------------------------------------------------
+Report for cell memory.v1
+Instance Path : setMem
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        20            6.9
+                               LUT4         2            0.4
+                              TOTAL        22
+----------------------------------------------------------------------
+Report for cell waveFetcherFM.v1
+Instance Path : voltageGetter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        65          100.0
+                            FD1P3XZ       203           70.5
+                               LUT4       420           82.0
+                              MAC16         2          100.0
+SUB MODULES
+                           adderMac         1
+adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP")         1
+                      mac16x16x32FM         1
+              modulationGeneratorFM         1
+                            multMAC         1
+multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off")         1
+                 phaseAccumulatorFM         1
+                            waveSin         1
+                         waveSin_U0         1
+                          waveTable         1
+                       waveTable_U1         1
+                              TOTAL       702
+----------------------------------------------------------------------
+Report for cell waveTable.v1
+Instance Path : voltageGetter.waves
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4       184           35.9
+SUB MODULES
+                            waveSin         1
+                              TOTAL       185
+----------------------------------------------------------------------
+Report for cell waveSin.v1
+Instance Path : voltageGetter.waves.sinTable
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4       168           32.8
+                              TOTAL       168
+----------------------------------------------------------------------
+Report for cell waveTable_U1.v1
+Instance Path : voltageGetter.modWaves
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4       196           38.3
+SUB MODULES
+                         waveSin_U0         1
+                              TOTAL       197
+----------------------------------------------------------------------
+Report for cell waveSin_U0.v1
+Instance Path : voltageGetter.modWaves.sinTable
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4       167           32.6
+                              TOTAL       167
+----------------------------------------------------------------------
+Report for cell modulationGeneratorFM.v1
+Instance Path : voltageGetter.modGen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17           26.2
+                            FD1P3XZ        32           11.1
+                               LUT4         7            1.4
+                              TOTAL        56
+----------------------------------------------------------------------
+Report for cell phaseAccumulatorFM.v1
+Instance Path : voltageGetter.accumPhase
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        48           73.8
+                            FD1P3XZ       171           59.4
+                               LUT4        33            6.4
+                              MAC16         2          100.0
+SUB MODULES
+                           adderMac         1
+adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP")         1
+                      mac16x16x32FM         1
+                            multMAC         1
+multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off")         1
+                              TOTAL       260
+----------------------------------------------------------------------
+Report for cell mac16x16x32FM.v1
+Instance Path : voltageGetter.accumPhase.fmMac
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        31           47.7
+                            FD1P3XZ       139           48.3
+                              MAC16         2          100.0
+SUB MODULES
+                           adderMac         1
+adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP")         1
+                            multMAC         1
+multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off")         1
+                              TOTAL       177
+----------------------------------------------------------------------
+Report for cell multMAC.v1
+Instance Path : voltageGetter.accumPhase.fmMac.multiply
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        15           23.1
+                            FD1P3XZ        58           20.1
+                              MAC16         2          100.0
+SUB MODULES
+multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off")         1
+                              TOTAL        77
+----------------------------------------------------------------------
+Report for cell multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP").v1
+Instance Path : voltageGetter.accumPhase.fmMac.multiply.lscc_multiplier_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        15           23.1
+                            FD1P3XZ        58           20.1
+                              MAC16         2          100.0
+SUB MODULES
+multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off")         1
+                              TOTAL        76
+----------------------------------------------------------------------
+Report for cell multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off").v1
+Instance Path : voltageGetter.accumPhase.fmMac.multiply.lscc_multiplier_inst.genblk1.u_lscc_multiplier_dsp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        15           23.1
+                            FD1P3XZ        58           20.1
+                              MAC16         2          100.0
+                              TOTAL        75
+----------------------------------------------------------------------
+Report for cell adderMac.v1
+Instance Path : voltageGetter.accumPhase.fmMac.add
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        16           24.6
+                            FD1P3XZ        81           28.1
+SUB MODULES
+adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP")         1
+                              TOTAL        98
+----------------------------------------------------------------------
+Report for cell adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP").v1
+Instance Path : voltageGetter.accumPhase.fmMac.add.lscc_adder_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        16           24.6
+                            FD1P3XZ        81           28.1
+                              TOTAL        97

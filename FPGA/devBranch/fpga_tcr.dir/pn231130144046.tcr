@@ -1,0 +1,11 @@
+#Start recording tcl command: 11/30/2023 14:38:58
+#Project Location: C:/Users/kbox/Desktop/FPGA/fpga; Project name: fpga
+C:/Users/kbox/Desktop/FPGA/helpState
+fpga
+#Start recording tcl command: 11/30/2023 14:40:46
+#Project Location: C:/Users/kbox/Desktop/FPGA/helpState; Project name: fpga
+prj_open "C:/Users/kbox/Desktop/FPGA/fpga/fpga.rdf"
+prj_save 
+prj_close
+prj_open "C:/Users/kbox/Desktop/FPGA/helpState/fpga.rdf"
+#Stop recording: 11/30/2023 14:40:46

@@ -1,0 +1,5671 @@
+<HTML>
+<HEAD>
+<TITLE>Timing Report</TITLE>
+<link href="file:///C:/lscc/radiant/3.2/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/3.2/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+tapath {
+  display: none;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" class="Child" onclick="hideTocList()"><PRE>
+<A name="timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 3.2.0.18.0
+
+Thu Dec  7 12:33:15 2023
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt fpga_impl_1.twr fpga_impl_1.udb -gui
+
+-----------------------------------------
+Design:          top
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+*Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+<LI>    <A href=#Timing_rpt_DesignChecking>1  DESIGN CHECKING</A></LI>
+<LI>        <A href=#Timing_rpt_SDCConstraints>1.1  SDC Constraints</A></LI>
+<LI>        <A href=#Timing_rpt_CombinationalLoop>1.2  Combinational Loop</A></LI>
+<LI>    <A href=#Timing_rpt_ClockSummary>2  CLOCK SUMMARY</A></LI>
+<LI>        <A href=#Timing_rpt_Clk_1>2.1  Clock clk</A></LI>
+<LI>    <A href=#Timing_rpt_AnalysisSummary>3  TIMING ANALYSIS SUMMARY</A></LI>
+<LI>        <A href=#Timing_rpt_Overall>3.1  Overall (Setup and Hold)</A></LI>
+<LI>            <A href=#Timing_rpt_ConstraintCoverage>3.1.1  Constraint Coverage</A></LI>
+<LI>            <A href=#Timing_rpt_Errors>3.1.2  Timing Errors</A></LI>
+<LI>            <A href=#Timing_rpt_TotalScore>3.1.3  Total Timing Score</A></LI>
+<LI>        <A href=#Timing_rpt_SetupSummary>3.2  Setup Summary Report</A></LI>
+<LI>        <A href=#Timing_rpt_HoldSummary>3.3  Hold Summary Report</A></LI>
+<LI>        <A href=#Timing_rpt_UnconstrainedReport>3.4  Unconstrained Report</A></LI>
+<LI>            <A href=#Timing_rpt_UnconstrainedEndpoints>3.4.1  Unconstrained Start/End Points</A></LI>
+<LI>            <A href=#Timing_rpt_StartEndPointsWithoutTimingConstraints>3.4.2  Start/End Points Without Timing Constraints</A></LI>
+<LI>    <A href=#Timing_rpt_DetailedReport>4  DETAILED REPORT</A></LI>
+<LI>        <A href=#Timing_rpt_SetupDetailedReport>4.1  Setup Detailed Report</A></LI>
+<LI>        <A href=#Timing_rpt_HoldDetailedReport>4.2  Hold Detailed Report</A></LI>
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+
+<A name="Timing_rpt_DesignChecking"></A><B><U><big>1  DESIGN CHECKING</big></U></B>
+
+<A name="Timing_rpt_SDCConstraints"></A><B><U><big>1.1  SDC Constraints</big></U></B>
+
+create_clock -name {clk} -period 83.3333 [get_pins {clkGen/hf_osc/CLKHF }] 
+
+Operating conditions:
+--------------------
+    Temperature: 100C
+
+<A name="Timing_rpt_CombinationalLoop"></A><B><U><big>1.2  Combinational Loop</big></U></B>
+
+
+<A name="Timing_rpt_ClockSummary"></A><B><U><big>2  CLOCK SUMMARY</big></U></B>
+
+<A name="Timing_rpt_Clk_1"></A><B><U><big>2.1 Clock "clk"</big></U></B>
+
+create_clock -name {clk} -period 83.3333 [get_pins {clkGen/hf_osc/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+               Clock clk                |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk                               |             Target |          83.333 ns |         12.000 MHz 
+                                        | Actual (all paths) |          51.098 ns |         19.570 MHz 
+clkGen/hf_osc/CLKHF (MPW)               |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
+
+<A name="Timing_rpt_AnalysisSummary"></A><B><U><big>3  TIMING ANALYSIS SUMMARY</big></U></B>
+
+<A name="Timing_rpt_Overall"></A><B><U><big>3.1  Overall (Setup and Hold)</big></U></B>
+
+<A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>3.1.1  Constraint Coverage</big></U></B>
+
+Constraint Coverage: 91.2538%
+
+<A name="Timing_rpt_Errors"></A><B><U><big>3.1.2  Timing Errors</big></U></B>
+
+
+Timing Errors: 0 endpoints (setup), 0 endpoints (hold)
+
+<A name="Timing_rpt_TotalScore"></A><B><U><big>3.1.3  Total Timing Score</big></U></B>
+
+Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
+
+<A name="Timing_rpt_SetupSummary"></A><B><U><big>3.2  Setup Summary Report</big></U></B>
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+toSpeak/vShiftOut_i2/D                   |   16.118 ns 
+toSpeak/vShiftOut_i3/D                   |   16.727 ns 
+toSpeak/vShiftOut_i4/D                   |   16.779 ns 
+toSpeak/vShiftOut_i1/D                   |   17.123 ns 
+toSpeak/vShiftOut_i5/D                   |   19.382 ns 
+toSpeak/vShiftOut_i6/D                   |   19.832 ns 
+toSpeak/vShiftOut_i0/D                   |   21.537 ns 
+toSpeak/vShiftOut_i7/D                   |   22.197 ns 
+toSpeak/vShiftOut_i13/D                  |   32.600 ns 
+toSpeak/vShiftOut_i12/D                  |   32.864 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
+
+<A name="Timing_rpt_HoldSummary"></A><B><U><big>3.3  Hold Summary Report</big></U></B>
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+setMem/mod__1__i1/D                      |    1.715 ns 
+setMem/fmOffset_i0_i0/D                  |    1.715 ns 
+toSpeak/state_FSM_i4/D                   |    1.715 ns 
+toSpeak/state_FSM_i3/D                   |    1.715 ns 
+toSpeak/state_FSM_i8/D                   |    1.715 ns 
+toSpeak/state_FSM_i10/D                  |    1.715 ns 
+toSpeak/state_FSM_i9/D                   |    1.715 ns 
+toSpeak/state_FSM_i2/D                   |    1.715 ns 
+toSpeak/vShiftOut_i9/D                   |    1.715 ns 
+toSpeak/vShiftOut_i14/D                  |    1.715 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+<A name="Timing_rpt_UnconstrainedReport"></A><B><U><big>3.4  Unconstrained Report</big></U></B>
+
+<A name="Timing_rpt_UnconstrainedEndpoints"></A><B><U><big>3.4.1  Unconstrained Start/End Points</big></U></B>
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+         Listing 1 Start Points         |           Type           
+-------------------------------------------------------------------
+toSpeak/vShiftOut_i15/Q                 |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         1
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+{voltageGetter/modGen/accum_121__i26/SR   voltageGetter/modGen/accum_121__i27/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i24/SR   voltageGetter/modGen/accum_121__i25/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i22/SR   voltageGetter/modGen/accum_121__i23/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i20/SR   voltageGetter/modGen/accum_121__i21/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i18/SR   voltageGetter/modGen/accum_121__i19/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i16/SR   voltageGetter/modGen/accum_121__i17/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i14/SR   voltageGetter/modGen/accum_121__i15/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i12/SR   voltageGetter/modGen/accum_121__i13/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i10/SR   voltageGetter/modGen/accum_121__i11/SR}                           
+                                        |           No arrival time
+{voltageGetter/modGen/accum_121__i8/SR   voltageGetter/modGen/accum_121__i9/SR}                           
+                                        |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                       163
+                                        |                          
+-------------------------------------------------------------------
+
+<A name="Timing_rpt_StartEndPointsWithoutTimingConstraints"></A><B><U><big>3.4.2  Start/End Points Without Timing Constraints</big></U></B>
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+msdi                                    |                     input
+mCS                                     |                     input
+msck                                    |                     input
+rst                                     |                     input
+volVal[0]                               |                    output
+volVal[1]                               |                    output
+volVal[2]                               |                    output
+volVal[3]                               |                    output
+volVal[4]                               |                    output
+volVal[5]                               |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                        16
+                                        |                          
+-------------------------------------------------------------------
+
+Registers without clock definition
+Define the clock for these registers.
+-------------------------------------------------------------------
+         Listing 8 Instance(s)          |           Type           
+-------------------------------------------------------------------
+readMCU/recVal_i0_i12                   |                  No Clock
+readMCU/recVal_i0_i6                    |                  No Clock
+readMCU/recVal_i0_i10                   |                  No Clock
+readMCU/recVal_i0_i8                    |                  No Clock
+readMCU/recVal_i0_i14                   |                  No Clock
+readMCU/recVal_i0_i4                    |                  No Clock
+readMCU/recVal_i0_i2                    |                  No Clock
+readMCU/recVal_i0_i0                    |                  No Clock
+-------------------------------------------------------------------
+                                        |                          
+Number of registers without clock defin |                          
+ition                                   |                         8
+                                        |                          
+-------------------------------------------------------------------
+
+<A name="Timing_rpt_DetailedReport"></A><B><U><big>4  DETAILED REPORT</big></U></B>
+<A name="Timing_rpt_SetupDetailedReport"></A><B><U><big>4.1  Setup Detailed Report</big></U></B>
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i27/Q  (SLICE_R19C10A)
+Path End         : toSpeak/vShiftOut_i2/D  (SLICE_R19C17B)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 8
+Delay Ratio      : 80.9% (route), 19.1% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 16.117 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i28/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_154/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i27/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_154/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i2/D",
+        "phy_name":"toSpeak.SLICE_126/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i27/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_154/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i27/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_154/Q1"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[2]",
+            "phy_name":"carIndex[2]"
+        },
+        "arrive":11.130,
+        "delay":4.243
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_2_i93_4_lut/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_321/C0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_2_i93_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_321/F0"
+        },
+        "arrive":11.579,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n93_adj_494",
+            "phy_name":"voltageGetter.waves.sinTable.n93_adj_494"
+        },
+        "arrive":15.320,
+        "delay":3.741
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10182_4_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_322/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10182_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_322/F1"
+        },
+        "arrive":15.769,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15248",
+            "phy_name":"voltageGetter.waves.sinTable.n15248"
+        },
+        "arrive":18.254,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[5]_bdd_4_lut_3/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_303/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[5]_bdd_4_lut_3/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_303/F0"
+        },
+        "arrive":18.703,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16657",
+            "phy_name":"voltageGetter.waves.sinTable.n16657"
+        },
+        "arrive":21.849,
+        "delay":3.146
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16657_bdd_4_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_304/A0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16657_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_304/F0"
+        },
+        "arrive":22.298,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15278",
+            "phy_name":"voltageGetter.waves.n15278"
+        },
+        "arrive":24.466,
+        "delay":2.168
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/n16573_bdd_4_lut/C",
+            "phy_name":"voltageGetter.waves.SLICE_278/D0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/n16573_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_278/F0"
+        },
+        "arrive":24.942,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/n16576",
+            "phy_name":"voltageGetter.waves.n16576"
+        },
+        "arrive":25.246,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/i10112_3_lut/A",
+            "phy_name":"voltageGetter.waves.SLICE_278/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/i10112_3_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_278/F1"
+        },
+        "arrive":25.695,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_2",
+            "phy_name":"volVal_c_2"
+        },
+        "arrive":29.052,
+        "delay":3.357
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i3_4_lut/A",
+            "phy_name":"toSpeak.SLICE_126/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i3_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_126/F1"
+        },
+        "arrive":29.528,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[2]",
+            "phy_name":"toSpeak.nextVShiftOut[2]"
+        },
+        "arrive":29.528,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i27/CK->voltageGetter/accumPhase/accum_i27/Q
+                                          SLICE_R19C10A      CLK_TO_Q1_DELAY  1.388                  6.887  86      
+voltageGetter/accumPhase/carIndex[2]                         NET DELAY        4.243                 11.130  86      
+voltageGetter/waves/sinTable/mux_83_Mux_2_i93_4_lut/C->voltageGetter/waves/sinTable/mux_83_Mux_2_i93_4_lut/Z
+                                          SLICE_R21C15D      C0_TO_F0_DELAY   0.449                 11.579  1       
+voltageGetter/waves/sinTable/n93_adj_494                     NET DELAY        3.741                 15.320  1       
+voltageGetter/waves/sinTable/i10182_4_lut/B->voltageGetter/waves/sinTable/i10182_4_lut/Z
+                                          SLICE_R21C12C      A1_TO_F1_DELAY   0.449                 15.769  1       
+voltageGetter/waves/sinTable/n15248                          NET DELAY        2.485                 18.254  1       
+voltageGetter/waves/sinTable/carIndex[5]_bdd_4_lut_3/B->voltageGetter/waves/sinTable/carIndex[5]_bdd_4_lut_3/Z
+                                          SLICE_R21C12B      B0_TO_F0_DELAY   0.449                 18.703  1       
+voltageGetter/waves/sinTable/n16657                          NET DELAY        3.146                 21.849  1       
+voltageGetter/waves/sinTable/n16657_bdd_4_lut/A->voltageGetter/waves/sinTable/n16657_bdd_4_lut/Z
+                                          SLICE_R21C13B      A0_TO_F0_DELAY   0.449                 22.298  1       
+voltageGetter/waves/sinTable/n15278                          NET DELAY        2.168                 24.466  1       
+voltageGetter/waves/n16573_bdd_4_lut/C->voltageGetter/waves/n16573_bdd_4_lut/Z
+                                          SLICE_R22C13C      D0_TO_F0_DELAY   0.476                 24.942  1       
+voltageGetter/waves/n16576                                   NET DELAY        0.304                 25.246  1       
+voltageGetter/waves/i10112_3_lut/A->voltageGetter/waves/i10112_3_lut/Z
+                                          SLICE_R22C13C      C1_TO_F1_DELAY   0.449                 25.695  2       
+voltageGetter/waves/volVal_c_2                               NET DELAY        3.357                 29.052  2       
+toSpeak/mux_59_i3_4_lut/A->toSpeak/mux_59_i3_4_lut/Z
+                                          SLICE_R19C17B      D1_TO_F1_DELAY   0.476                 29.528  1       
+toSpeak/nextVShiftOut[2] ( DI1 )                             NET DELAY        0.000                 29.528  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i3/CK",
+        "phy_name":"toSpeak.SLICE_126/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -29.527  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                16.117  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i25/Q  (SLICE_R19C9C)
+Path End         : toSpeak/vShiftOut_i3/D  (SLICE_R19C17B)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 8
+Delay Ratio      : 80.4% (route), 19.6% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 16.726 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i25/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i3/D",
+        "phy_name":"toSpeak.SLICE_126/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i25/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i25/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/Q1"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[0]",
+            "phy_name":"carIndex[0]"
+        },
+        "arrive":11.262,
+        "delay":4.375
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10555_2_lut_4_lut/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_568/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10555_2_lut_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_568/F0"
+        },
+        "arrive":11.711,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15528",
+            "phy_name":"voltageGetter.waves.sinTable.n15528"
+        },
+        "arrive":14.196,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_281/B1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_281/F1"
+        },
+        "arrive":14.645,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16765",
+            "phy_name":"voltageGetter.waves.sinTable.n16765"
+        },
+        "arrive":17.130,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16765_bdd_4_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_282/B1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16765_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_282/F1"
+        },
+        "arrive":17.579,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16768",
+            "phy_name":"voltageGetter.waves.sinTable.n16768"
+        },
+        "arrive":20.130,
+        "delay":2.551
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10269_3_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_284/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10269_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_284/F1"
+        },
+        "arrive":20.579,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15335",
+            "phy_name":"voltageGetter.waves.n15335"
+        },
+        "arrive":23.936,
+        "delay":3.357
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/n16567_bdd_4_lut/C",
+            "phy_name":"voltageGetter.waves.SLICE_280/D0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/n16567_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_280/F0"
+        },
+        "arrive":24.412,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/n16570",
+            "phy_name":"voltageGetter.waves.n16570"
+        },
+        "arrive":24.716,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/i10109_3_lut/A",
+            "phy_name":"voltageGetter.waves.SLICE_280/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/i10109_3_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_280/F1"
+        },
+        "arrive":25.165,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_3",
+            "phy_name":"volVal_c_3"
+        },
+        "arrive":28.443,
+        "delay":3.278
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i4_4_lut/A",
+            "phy_name":"toSpeak.SLICE_126/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i4_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_126/F0"
+        },
+        "arrive":28.919,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[3]",
+            "phy_name":"toSpeak.nextVShiftOut[3]"
+        },
+        "arrive":28.919,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i25/CK->voltageGetter/accumPhase/accum_i25/Q
+                                          SLICE_R19C9C       CLK_TO_Q1_DELAY  1.388                  6.887  81      
+voltageGetter/accumPhase/carIndex[0]                         NET DELAY        4.375                 11.262  81      
+voltageGetter/waves/sinTable/i10555_2_lut_4_lut/C->voltageGetter/waves/sinTable/i10555_2_lut_4_lut/Z
+                                          SLICE_R24C13D      B0_TO_F0_DELAY   0.449                 11.711  1       
+voltageGetter/waves/sinTable/n15528                          NET DELAY        2.485                 14.196  1       
+voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut/C->voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut/Z
+                                          SLICE_R24C14A      B1_TO_F1_DELAY   0.449                 14.645  1       
+voltageGetter/waves/sinTable/n16765                          NET DELAY        2.485                 17.130  1       
+voltageGetter/waves/sinTable/n16765_bdd_4_lut/A->voltageGetter/waves/sinTable/n16765_bdd_4_lut/Z
+                                          SLICE_R24C14B      B1_TO_F1_DELAY   0.449                 17.579  1       
+voltageGetter/waves/sinTable/n16768                          NET DELAY        2.551                 20.130  1       
+voltageGetter/waves/sinTable/i10269_3_lut/A->voltageGetter/waves/sinTable/i10269_3_lut/Z
+                                          SLICE_R23C14B      A1_TO_F1_DELAY   0.449                 20.579  1       
+voltageGetter/waves/sinTable/n15335                          NET DELAY        3.357                 23.936  1       
+voltageGetter/waves/n16567_bdd_4_lut/C->voltageGetter/waves/n16567_bdd_4_lut/Z
+                                          SLICE_R21C14C      D0_TO_F0_DELAY   0.476                 24.412  1       
+voltageGetter/waves/n16570                                   NET DELAY        0.304                 24.716  1       
+voltageGetter/waves/i10109_3_lut/A->voltageGetter/waves/i10109_3_lut/Z
+                                          SLICE_R21C14C      C1_TO_F1_DELAY   0.449                 25.165  2       
+voltageGetter/waves/volVal_c_3                               NET DELAY        3.278                 28.443  2       
+toSpeak/mux_59_i4_4_lut/A->toSpeak/mux_59_i4_4_lut/Z
+                                          SLICE_R19C17B      D0_TO_F0_DELAY   0.476                 28.919  1       
+toSpeak/nextVShiftOut[3] ( DI0 )                             NET DELAY        0.000                 28.919  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i3/CK",
+        "phy_name":"toSpeak.SLICE_126/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -28.918  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                16.726  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i27/Q  (SLICE_R19C10A)
+Path End         : toSpeak/vShiftOut_i4/D  (SLICE_R19C18A)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 8
+Delay Ratio      : 80.4% (route), 19.6% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 16.778 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i28/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_154/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i27/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_154/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i4/D",
+        "phy_name":"toSpeak.SLICE_124/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i27/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_154/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i27/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_154/Q1"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[2]",
+            "phy_name":"carIndex[2]"
+        },
+        "arrive":11.209,
+        "delay":4.322
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_4_i157_3_lut_3_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_658/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_4_i157_3_lut_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_658/F1"
+        },
+        "arrive":11.658,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n157_adj_487",
+            "phy_name":"voltageGetter.waves.sinTable.n157_adj_487"
+        },
+        "arrive":14.421,
+        "delay":2.763
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_4_i158_3_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_319/D0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_4_i158_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_319/F0"
+        },
+        "arrive":14.897,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n158",
+            "phy_name":"voltageGetter.waves.sinTable.n158"
+        },
+        "arrive":15.201,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10173_4_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_319/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10173_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_319/F1"
+        },
+        "arrive":15.650,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15239",
+            "phy_name":"voltageGetter.waves.sinTable.n15239"
+        },
+        "arrive":18.135,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[6]_bdd_4_lut_2/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_309/B1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[6]_bdd_4_lut_2/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_309/F1"
+        },
+        "arrive":18.584,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16633",
+            "phy_name":"voltageGetter.waves.sinTable.n16633"
+        },
+        "arrive":21.069,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16633_bdd_4_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_310/B1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16633_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_310/F1"
+        },
+        "arrive":21.518,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/sinOut[4]",
+            "phy_name":"voltageGetter.waves.sinOut[4]"
+        },
+        "arrive":24.664,
+        "delay":3.146
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/n16771_bdd_4_lut/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_272/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/n16771_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_272/F1"
+        },
+        "arrive":25.113,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_4",
+            "phy_name":"volVal_c_4"
+        },
+        "arrive":28.391,
+        "delay":3.278
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i5_4_lut/A",
+            "phy_name":"toSpeak.SLICE_124/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i5_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_124/F1"
+        },
+        "arrive":28.867,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[4]",
+            "phy_name":"toSpeak.nextVShiftOut[4]"
+        },
+        "arrive":28.867,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i27/CK->voltageGetter/accumPhase/accum_i27/Q
+                                          SLICE_R19C10A      CLK_TO_Q1_DELAY  1.388                  6.887  86      
+voltageGetter/accumPhase/carIndex[2]                         NET DELAY        4.322                 11.209  86      
+voltageGetter/waves/sinTable/mux_83_Mux_4_i157_3_lut_3_lut/B->voltageGetter/waves/sinTable/mux_83_Mux_4_i157_3_lut_3_lut/Z
+                                          SLICE_R23C14D      C1_TO_F1_DELAY   0.449                 11.658  1       
+voltageGetter/waves/sinTable/n157_adj_487
+                                                             NET DELAY        2.763                 14.421  1       
+voltageGetter/waves/sinTable/mux_83_Mux_4_i158_3_lut/B->voltageGetter/waves/sinTable/mux_83_Mux_4_i158_3_lut/Z
+                                          SLICE_R23C16C      D0_TO_F0_DELAY   0.476                 14.897  1       
+voltageGetter/waves/sinTable/n158                            NET DELAY        0.304                 15.201  1       
+voltageGetter/waves/sinTable/i10173_4_lut/A->voltageGetter/waves/sinTable/i10173_4_lut/Z
+                                          SLICE_R23C16C      C1_TO_F1_DELAY   0.449                 15.650  1       
+voltageGetter/waves/sinTable/n15239                          NET DELAY        2.485                 18.135  1       
+voltageGetter/waves/sinTable/carIndex[6]_bdd_4_lut_2/B->voltageGetter/waves/sinTable/carIndex[6]_bdd_4_lut_2/Z
+                                          SLICE_R23C15B      B1_TO_F1_DELAY   0.449                 18.584  1       
+voltageGetter/waves/sinTable/n16633                          NET DELAY        2.485                 21.069  1       
+voltageGetter/waves/sinTable/n16633_bdd_4_lut/A->voltageGetter/waves/sinTable/n16633_bdd_4_lut/Z
+                                          SLICE_R22C16B      B1_TO_F1_DELAY   0.449                 21.518  1       
+voltageGetter/waves/sinTable/sinOut[4]                       NET DELAY        3.146                 24.664  1       
+voltageGetter/waves/n16771_bdd_4_lut/C->voltageGetter/waves/n16771_bdd_4_lut/Z
+                                          SLICE_R21C16C      A1_TO_F1_DELAY   0.449                 25.113  2       
+voltageGetter/waves/volVal_c_4                               NET DELAY        3.278                 28.391  2       
+toSpeak/mux_59_i5_4_lut/A->toSpeak/mux_59_i5_4_lut/Z
+                                          SLICE_R19C18A      D1_TO_F1_DELAY   0.476                 28.867  1       
+toSpeak/nextVShiftOut[4] ( DI1 )                             NET DELAY        0.000                 28.867  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i5/CK",
+        "phy_name":"toSpeak.SLICE_124/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -28.866  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                16.778  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i25/Q  (SLICE_R19C9C)
+Path End         : toSpeak/vShiftOut_i1/D  (SLICE_R19C17D)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 8
+Delay Ratio      : 80.1% (route), 19.9% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 17.122 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i25/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i1/D",
+        "phy_name":"toSpeak.SLICE_101/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i25/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i25/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/Q1"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[0]",
+            "phy_name":"carIndex[0]"
+        },
+        "arrive":11.328,
+        "delay":4.441
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_1_i61_4_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_572/A0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/mux_83_Mux_1_i61_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_572/F0"
+        },
+        "arrive":11.777,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n61_adj_469",
+            "phy_name":"voltageGetter.waves.sinTable.n61_adj_469"
+        },
+        "arrive":14.923,
+        "delay":3.146
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut_5/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_293/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut_5/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_293/F1"
+        },
+        "arrive":15.372,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16729",
+            "phy_name":"voltageGetter.waves.sinTable.n16729"
+        },
+        "arrive":17.923,
+        "delay":2.551
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16729_bdd_4_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_294/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16729_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_294/F1"
+        },
+        "arrive":18.372,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n16732",
+            "phy_name":"voltageGetter.waves.sinTable.n16732"
+        },
+        "arrive":20.923,
+        "delay":2.551
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10257_3_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_296/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10257_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_296/F1"
+        },
+        "arrive":21.372,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15323",
+            "phy_name":"voltageGetter.waves.n15323"
+        },
+        "arrive":23.540,
+        "delay":2.168
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/n16579_bdd_4_lut/C",
+            "phy_name":"voltageGetter.waves.SLICE_276/D0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/n16579_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_276/F0"
+        },
+        "arrive":24.016,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/n16582",
+            "phy_name":"voltageGetter.waves.n16582"
+        },
+        "arrive":24.320,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/i10115_3_lut/A",
+            "phy_name":"voltageGetter.waves.SLICE_276/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/i10115_3_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_276/F1"
+        },
+        "arrive":24.769,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_1",
+            "phy_name":"volVal_c_1"
+        },
+        "arrive":28.047,
+        "delay":3.278
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i2_4_lut/A",
+            "phy_name":"toSpeak.SLICE_101/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i2_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_101/F1"
+        },
+        "arrive":28.523,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[1]",
+            "phy_name":"toSpeak.nextVShiftOut[1]"
+        },
+        "arrive":28.523,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i25/CK->voltageGetter/accumPhase/accum_i25/Q
+                                          SLICE_R19C9C       CLK_TO_Q1_DELAY  1.388                  6.887  81      
+voltageGetter/accumPhase/carIndex[0]                         NET DELAY        4.441                 11.328  81      
+voltageGetter/waves/sinTable/mux_83_Mux_1_i61_4_lut/B->voltageGetter/waves/sinTable/mux_83_Mux_1_i61_4_lut/Z
+                                          SLICE_R24C15C      A0_TO_F0_DELAY   0.449                 11.777  1       
+voltageGetter/waves/sinTable/n61_adj_469                     NET DELAY        3.146                 14.923  1       
+voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut_5/C->voltageGetter/waves/sinTable/carIndex[4]_bdd_4_lut_5/Z
+                                          SLICE_R24C13A      A1_TO_F1_DELAY   0.449                 15.372  1       
+voltageGetter/waves/sinTable/n16729                          NET DELAY        2.551                 17.923  1       
+voltageGetter/waves/sinTable/n16729_bdd_4_lut/A->voltageGetter/waves/sinTable/n16729_bdd_4_lut/Z
+                                          SLICE_R24C13B      A1_TO_F1_DELAY   0.449                 18.372  1       
+voltageGetter/waves/sinTable/n16732                          NET DELAY        2.551                 20.923  1       
+voltageGetter/waves/sinTable/i10257_3_lut/A->voltageGetter/waves/sinTable/i10257_3_lut/Z
+                                          SLICE_R23C13B      A1_TO_F1_DELAY   0.449                 21.372  1       
+voltageGetter/waves/sinTable/n15323                          NET DELAY        2.168                 23.540  1       
+voltageGetter/waves/n16579_bdd_4_lut/C->voltageGetter/waves/n16579_bdd_4_lut/Z
+                                          SLICE_R22C14C      D0_TO_F0_DELAY   0.476                 24.016  1       
+voltageGetter/waves/n16582                                   NET DELAY        0.304                 24.320  1       
+voltageGetter/waves/i10115_3_lut/A->voltageGetter/waves/i10115_3_lut/Z
+                                          SLICE_R22C14C      C1_TO_F1_DELAY   0.449                 24.769  2       
+voltageGetter/waves/volVal_c_1                               NET DELAY        3.278                 28.047  2       
+toSpeak/mux_59_i2_4_lut/A->toSpeak/mux_59_i2_4_lut/Z
+                                          SLICE_R19C17D      D1_TO_F1_DELAY   0.476                 28.523  1       
+toSpeak/nextVShiftOut[1] ( DI1 )                             NET DELAY        0.000                 28.523  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i0/CK",
+        "phy_name":"toSpeak.SLICE_101/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -28.522  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                17.122  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i26/Q  (SLICE_R19C9C)
+Path End         : toSpeak/vShiftOut_i5/D  (SLICE_R19C18A)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 6
+Delay Ratio      : 82.4% (route), 17.6% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 19.381 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i5/D",
+        "phy_name":"toSpeak.SLICE_124/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[1]",
+            "phy_name":"carIndex[1]"
+        },
+        "arrive":12.452,
+        "delay":5.565
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C",
+            "phy_name":"SLICE_391/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z",
+            "phy_name":"SLICE_391/F0"
+        },
+        "arrive":12.901,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n7093",
+            "phy_name":"n7093"
+        },
+        "arrive":15.981,
+        "delay":3.080
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10559_2_lut_3_lut/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_715/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i10559_2_lut_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_715/F0"
+        },
+        "arrive":16.430,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n15371",
+            "phy_name":"voltageGetter.waves.sinTable.n15371"
+        },
+        "arrive":19.576,
+        "delay":3.146
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i237_4_lut/A",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_285/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i237_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_285/F1"
+        },
+        "arrive":20.025,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/sawOut[5]",
+            "phy_name":"voltageGetter.waves.sawOut[5]"
+        },
+        "arrive":22.576,
+        "delay":2.551
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/n16561_bdd_4_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_290/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/n16561_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_290/F1"
+        },
+        "arrive":23.025,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_5",
+            "phy_name":"volVal_c_5"
+        },
+        "arrive":25.788,
+        "delay":2.763
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i6_4_lut/A",
+            "phy_name":"toSpeak.SLICE_124/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i6_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_124/F0"
+        },
+        "arrive":26.264,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[5]",
+            "phy_name":"toSpeak.nextVShiftOut[5]"
+        },
+        "arrive":26.264,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i26/CK->voltageGetter/accumPhase/accum_i26/Q
+                                          SLICE_R19C9C       CLK_TO_Q0_DELAY  1.388                  6.887  85      
+voltageGetter/accumPhase/carIndex[1]                         NET DELAY        5.565                 12.452  85      
+voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C->voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z
+                                          SLICE_R18C13A      B0_TO_F0_DELAY   0.449                 12.901  5       
+voltageGetter/waves/sinTable/n7093                           NET DELAY        3.080                 15.981  5       
+voltageGetter/waves/sinTable/i10559_2_lut_3_lut/C->voltageGetter/waves/sinTable/i10559_2_lut_3_lut/Z
+                                          SLICE_R19C11B      B0_TO_F0_DELAY   0.449                 16.430  1       
+voltageGetter/waves/sinTable/n15371                          NET DELAY        3.146                 19.576  1       
+voltageGetter/waves/sinTable/i237_4_lut/A->voltageGetter/waves/sinTable/i237_4_lut/Z
+                                          SLICE_R19C14C      A1_TO_F1_DELAY   0.449                 20.025  1       
+voltageGetter/waves/sinTable/sawOut[5]                       NET DELAY        2.551                 22.576  1       
+voltageGetter/waves/n16561_bdd_4_lut/B->voltageGetter/waves/n16561_bdd_4_lut/Z
+                                          SLICE_R18C15C      A1_TO_F1_DELAY   0.449                 23.025  2       
+voltageGetter/waves/volVal_c_5                               NET DELAY        2.763                 25.788  2       
+toSpeak/mux_59_i6_4_lut/A->toSpeak/mux_59_i6_4_lut/Z
+                                          SLICE_R19C18A      D0_TO_F0_DELAY   0.476                 26.264  1       
+toSpeak/nextVShiftOut[5] ( DI0 )                             NET DELAY        0.000                 26.264  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i5/CK",
+        "phy_name":"toSpeak.SLICE_124/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -26.263  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                19.381  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i26/Q  (SLICE_R19C9C)
+Path End         : toSpeak/vShiftOut_i6/D  (SLICE_R18C17C)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 6
+Delay Ratio      : 82.0% (route), 18.0% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 19.831 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i6/D",
+        "phy_name":"toSpeak.SLICE_122/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[1]",
+            "phy_name":"carIndex[1]"
+        },
+        "arrive":12.452,
+        "delay":5.565
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C",
+            "phy_name":"SLICE_391/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z",
+            "phy_name":"SLICE_391/F0"
+        },
+        "arrive":12.901,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n7093",
+            "phy_name":"n7093"
+        },
+        "arrive":15.386,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i5378_2_lut_3_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_481/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i5378_2_lut_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_481/F0"
+        },
+        "arrive":15.835,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n4936",
+            "phy_name":"voltageGetter.waves.sinTable.n4936"
+        },
+        "arrive":18.320,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i208_4_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_442/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i208_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_442/F0"
+        },
+        "arrive":18.769,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/sawOut[6]",
+            "phy_name":"voltageGetter.waves.sawOut[6]"
+        },
+        "arrive":21.532,
+        "delay":2.763
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/n16621_bdd_4_lut/B",
+            "phy_name":"voltageGetter.waves.SLICE_441/D0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/n16621_bdd_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_441/F0"
+        },
+        "arrive":21.981,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_6",
+            "phy_name":"volVal_c_6"
+        },
+        "arrive":25.338,
+        "delay":3.357
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i7_4_lut/A",
+            "phy_name":"toSpeak.SLICE_122/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i7_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_122/F1"
+        },
+        "arrive":25.814,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[6]",
+            "phy_name":"toSpeak.nextVShiftOut[6]"
+        },
+        "arrive":25.814,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i26/CK->voltageGetter/accumPhase/accum_i26/Q
+                                          SLICE_R19C9C       CLK_TO_Q0_DELAY  1.388                  6.887  85      
+voltageGetter/accumPhase/carIndex[1]                         NET DELAY        5.565                 12.452  85      
+voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C->voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z
+                                          SLICE_R18C13A      B0_TO_F0_DELAY   0.449                 12.901  5       
+voltageGetter/waves/sinTable/n7093                           NET DELAY        2.485                 15.386  5       
+voltageGetter/waves/sinTable/i5378_2_lut_3_lut/B->voltageGetter/waves/sinTable/i5378_2_lut_3_lut/Z
+                                          SLICE_R18C12A      B0_TO_F0_DELAY   0.449                 15.835  2       
+voltageGetter/waves/sinTable/n4936                           NET DELAY        2.485                 18.320  2       
+voltageGetter/waves/sinTable/i208_4_lut/B->voltageGetter/waves/sinTable/i208_4_lut/Z
+                                          SLICE_R18C11B      B0_TO_F0_DELAY   0.449                 18.769  1       
+voltageGetter/waves/sinTable/sawOut[6]                       NET DELAY        2.763                 21.532  1       
+voltageGetter/waves/n16621_bdd_4_lut/B->voltageGetter/waves/n16621_bdd_4_lut/Z
+                                          SLICE_R18C13C      D0_TO_F0_DELAY   0.449                 21.981  2       
+voltageGetter/waves/volVal_c_6                               NET DELAY        3.357                 25.338  2       
+toSpeak/mux_59_i7_4_lut/A->toSpeak/mux_59_i7_4_lut/Z
+                                          SLICE_R18C17C      D1_TO_F1_DELAY   0.476                 25.814  1       
+toSpeak/nextVShiftOut[6] ( DI1 )                             NET DELAY        0.000                 25.814  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i7/CK",
+        "phy_name":"toSpeak.SLICE_122/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -25.813  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                19.831  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i26/Q  (SLICE_R19C9C)
+Path End         : toSpeak/vShiftOut_i0/D  (SLICE_R19C17D)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 6
+Delay Ratio      : 80.2% (route), 19.8% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 21.536 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i0/D",
+        "phy_name":"toSpeak.SLICE_101/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[1]",
+            "phy_name":"carIndex[1]"
+        },
+        "arrive":12.452,
+        "delay":5.565
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C",
+            "phy_name":"SLICE_391/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z",
+            "phy_name":"SLICE_391/F0"
+        },
+        "arrive":12.901,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n7093",
+            "phy_name":"n7093"
+        },
+        "arrive":15.452,
+        "delay":2.551
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/Mux_243_i127_3_lut_4_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_599/A1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/Mux_243_i127_3_lut_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_599/F1"
+        },
+        "arrive":15.901,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n4828",
+            "phy_name":"voltageGetter.waves.n4828"
+        },
+        "arrive":19.047,
+        "delay":3.146
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/waveIn_1__I_0_Mux_0_i1_4_lut/B",
+            "phy_name":"voltageGetter.waves.SLICE_273/A0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/waveIn_1__I_0_Mux_0_i1_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_273/F0"
+        },
+        "arrive":19.523,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/n1",
+            "phy_name":"voltageGetter.waves.n1"
+        },
+        "arrive":19.827,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/waveIn_1__I_0_Mux_0_i3_4_lut/A",
+            "phy_name":"voltageGetter.waves.SLICE_273/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/waveIn_1__I_0_Mux_0_i3_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_273/F1"
+        },
+        "arrive":20.276,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_0",
+            "phy_name":"volVal_c_0"
+        },
+        "arrive":23.633,
+        "delay":3.357
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i2_3_lut/B",
+            "phy_name":"toSpeak.SLICE_101/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i2_3_lut/Z",
+            "phy_name":"toSpeak.SLICE_101/F0"
+        },
+        "arrive":24.109,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[0]",
+            "phy_name":"toSpeak.nextVShiftOut[0]"
+        },
+        "arrive":24.109,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i26/CK->voltageGetter/accumPhase/accum_i26/Q
+                                          SLICE_R19C9C       CLK_TO_Q0_DELAY  1.388                  6.887  85      
+voltageGetter/accumPhase/carIndex[1]                         NET DELAY        5.565                 12.452  85      
+voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C->voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z
+                                          SLICE_R18C13A      B0_TO_F0_DELAY   0.449                 12.901  5       
+voltageGetter/waves/sinTable/n7093                           NET DELAY        2.551                 15.452  5       
+voltageGetter/waves/sinTable/Mux_243_i127_3_lut_4_lut/B->voltageGetter/waves/sinTable/Mux_243_i127_3_lut_4_lut/Z
+                                          SLICE_R18C12C      A1_TO_F1_DELAY   0.449                 15.901  1       
+voltageGetter/waves/sinTable/n4828                           NET DELAY        3.146                 19.047  1       
+voltageGetter/waves/waveIn_1__I_0_Mux_0_i1_4_lut/B->voltageGetter/waves/waveIn_1__I_0_Mux_0_i1_4_lut/Z
+                                          SLICE_R19C12C      A0_TO_F0_DELAY   0.476                 19.523  1       
+voltageGetter/waves/n1                                       NET DELAY        0.304                 19.827  1       
+voltageGetter/waves/waveIn_1__I_0_Mux_0_i3_4_lut/A->voltageGetter/waves/waveIn_1__I_0_Mux_0_i3_4_lut/Z
+                                          SLICE_R19C12C      C1_TO_F1_DELAY   0.449                 20.276  2       
+voltageGetter/waves/volVal_c_0                               NET DELAY        3.357                 23.633  2       
+toSpeak/i2_3_lut/B->toSpeak/i2_3_lut/Z    SLICE_R19C17D      D0_TO_F0_DELAY   0.476                 24.109  1       
+toSpeak/nextVShiftOut[0] ( DI0 )                             NET DELAY        0.000                 24.109  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i0/CK",
+        "phy_name":"toSpeak.SLICE_101/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -24.108  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                21.536  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : voltageGetter/accumPhase/accum_i26/Q  (SLICE_R19C9C)
+Path End         : toSpeak/vShiftOut_i7/D  (SLICE_R18C17C)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 6
+Delay Ratio      : 79.5% (route), 20.5% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 22.196 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+        "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i7/D",
+        "phy_name":"toSpeak.SLICE_122/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/CK",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/accumPhase/accum_i26/Q",
+            "phy_name":"voltageGetter.accumPhase.SLICE_156/Q0"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/carIndex[1]",
+            "phy_name":"carIndex[1]"
+        },
+        "arrive":12.452,
+        "delay":5.565
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C",
+            "phy_name":"SLICE_391/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z",
+            "phy_name":"SLICE_391/F0"
+        },
+        "arrive":12.901,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n7093",
+            "phy_name":"n7093"
+        },
+        "arrive":15.386,
+        "delay":2.485
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i5378_2_lut_3_lut/B",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_481/B0"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/i5378_2_lut_3_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_481/F0"
+        },
+        "arrive":15.862,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n4936",
+            "phy_name":"voltageGetter.waves.sinTable.n4936"
+        },
+        "arrive":16.166,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/sinTable/waveIn_1__I_0_Mux_7_i2_3_lut_3_lut_4_lut/C",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_481/C1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/sinTable/waveIn_1__I_0_Mux_7_i2_3_lut_3_lut_4_lut/Z",
+            "phy_name":"voltageGetter.waves.sinTable.SLICE_481/F1"
+        },
+        "arrive":16.615,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/sinTable/n2",
+            "phy_name":"voltageGetter.waves.n2"
+        },
+        "arrive":18.783,
+        "delay":2.168
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"voltageGetter/waves/waveIn_1__I_0_Mux_7_i3_4_lut/B",
+            "phy_name":"voltageGetter.waves.SLICE_439/D1"
+        },
+        "pin1":
+        {
+            "log_name":"voltageGetter/waves/waveIn_1__I_0_Mux_7_i3_4_lut/Z",
+            "phy_name":"voltageGetter.waves.SLICE_439/F1"
+        },
+        "arrive":19.232,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/waves/volVal_c_7",
+            "phy_name":"volVal_c_7"
+        },
+        "arrive":22.973,
+        "delay":3.741
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i8_4_lut/A",
+            "phy_name":"toSpeak.SLICE_122/A0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i8_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_122/F0"
+        },
+        "arrive":23.449,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[7]",
+            "phy_name":"toSpeak.nextVShiftOut[7]"
+        },
+        "arrive":23.449,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+voltageGetter/accumPhase/accum_i26/CK->voltageGetter/accumPhase/accum_i26/Q
+                                          SLICE_R19C9C       CLK_TO_Q0_DELAY  1.388                  6.887  85      
+voltageGetter/accumPhase/carIndex[1]                         NET DELAY        5.565                 12.452  85      
+voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/C->voltageGetter/waves/sinTable/i1_2_lut_3_lut_4_lut/Z
+                                          SLICE_R18C13A      B0_TO_F0_DELAY   0.449                 12.901  5       
+voltageGetter/waves/sinTable/n7093                           NET DELAY        2.485                 15.386  5       
+voltageGetter/waves/sinTable/i5378_2_lut_3_lut/B->voltageGetter/waves/sinTable/i5378_2_lut_3_lut/Z
+                                          SLICE_R18C12A      B0_TO_F0_DELAY   0.476                 15.862  2       
+voltageGetter/waves/sinTable/n4936                           NET DELAY        0.304                 16.166  2       
+voltageGetter/waves/sinTable/waveIn_1__I_0_Mux_7_i2_3_lut_3_lut_4_lut/C->voltageGetter/waves/sinTable/waveIn_1__I_0_Mux_7_i2_3_lut_3_lut_4_lut/Z
+                                          SLICE_R18C12A      C1_TO_F1_DELAY   0.449                 16.615  1       
+voltageGetter/waves/sinTable/n2                              NET DELAY        2.168                 18.783  1       
+voltageGetter/waves/waveIn_1__I_0_Mux_7_i3_4_lut/B->voltageGetter/waves/waveIn_1__I_0_Mux_7_i3_4_lut/Z
+                                          SLICE_R18C12B      D1_TO_F1_DELAY   0.449                 19.232  2       
+voltageGetter/waves/volVal_c_7                               NET DELAY        3.741                 22.973  2       
+toSpeak/mux_59_i8_4_lut/A->toSpeak/mux_59_i8_4_lut/Z
+                                          SLICE_R18C17C      A0_TO_F0_DELAY   0.476                 23.449  1       
+toSpeak/nextVShiftOut[7] ( DI0 )                             NET DELAY        0.000                 23.449  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i7/CK",
+        "phy_name":"toSpeak.SLICE_122/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -23.448  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                22.196  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i5/Q  (SLICE_R16C22D)
+Path End         : toSpeak/vShiftOut_i13/D  (SLICE_R18C21A)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 4
+Delay Ratio      : 63.0% (route), 37.0% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.599 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i8/CK",
+        "phy_name":"toSpeak.SLICE_108/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i5/Q",
+        "phy_name":"toSpeak.SLICE_108/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i13/D",
+        "phy_name":"toSpeak.SLICE_116/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i5/CK",
+            "phy_name":"toSpeak.SLICE_108/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i5/Q",
+            "phy_name":"toSpeak.SLICE_108/Q1"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4258[4]",
+            "phy_name":"toSpeak.n4258[4]"
+        },
+        "arrive":8.909,
+        "delay":2.022
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i1_2_lut/A",
+            "phy_name":"toSpeak.SLICE_429/C0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i1_2_lut/Z",
+            "phy_name":"toSpeak.SLICE_429/F0"
+        },
+        "arrive":9.385,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n6",
+            "phy_name":"toSpeak.n6"
+        },
+        "arrive":9.689,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i4_4_lut/D",
+            "phy_name":"toSpeak.SLICE_429/C1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i4_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_429/F1"
+        },
+        "arrive":10.138,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4318",
+            "phy_name":"toSpeak.n4318"
+        },
+        "arrive":12.570,
+        "delay":2.432
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i14_3_lut/A",
+            "phy_name":"toSpeak.SLICE_116/C0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i14_3_lut/Z",
+            "phy_name":"toSpeak.SLICE_116/F0"
+        },
+        "arrive":13.046,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[13]",
+            "phy_name":"toSpeak.nextVShiftOut[13]"
+        },
+        "arrive":13.046,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i5/CK->toSpeak/state_FSM_i5/Q
+                                          SLICE_R16C22D      CLK_TO_Q1_DELAY  1.388                  6.887  6       
+toSpeak/n4258[4]                                             NET DELAY        2.022                  8.909  6       
+toSpeak/i1_2_lut/A->toSpeak/i1_2_lut/Z    SLICE_R17C21D      C0_TO_F0_DELAY   0.476                  9.385  1       
+toSpeak/n6                                                   NET DELAY        0.304                  9.689  1       
+toSpeak/i4_4_lut/D->toSpeak/i4_4_lut/Z    SLICE_R17C21D      C1_TO_F1_DELAY   0.449                 10.138  10      
+toSpeak/n4318                                                NET DELAY        2.432                 12.570  10      
+toSpeak/mux_59_i14_3_lut/A->toSpeak/mux_59_i14_3_lut/Z
+                                          SLICE_R18C21A      C0_TO_F0_DELAY   0.476                 13.046  1       
+toSpeak/nextVShiftOut[13] ( DI0 )                            NET DELAY        0.000                 13.046  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i13/CK",
+        "phy_name":"toSpeak.SLICE_116/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -13.045  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                32.599  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i5/Q  (SLICE_R16C22D)
+Path End         : toSpeak/vShiftOut_i12/D  (SLICE_R18C21A)
+Source Clock     : clk (R)
+Destination Clock: clk (F)
+Logic Level      : 4
+Delay Ratio      : 61.7% (route), 38.3% (logic)
+Clock Skew       : -1.322 ns
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.863 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i8/CK",
+        "phy_name":"toSpeak.SLICE_108/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        5.499                  5.499  147     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i5/Q",
+        "phy_name":"toSpeak.SLICE_108/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i12/D",
+        "phy_name":"toSpeak.SLICE_116/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i5/CK",
+            "phy_name":"toSpeak.SLICE_108/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i5/Q",
+            "phy_name":"toSpeak.SLICE_108/Q1"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4258[4]",
+            "phy_name":"toSpeak.n4258[4]"
+        },
+        "arrive":8.909,
+        "delay":2.022
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i1_2_lut/A",
+            "phy_name":"toSpeak.SLICE_429/C0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i1_2_lut/Z",
+            "phy_name":"toSpeak.SLICE_429/F0"
+        },
+        "arrive":9.385,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n6",
+            "phy_name":"toSpeak.n6"
+        },
+        "arrive":9.689,
+        "delay":0.304
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i4_4_lut/D",
+            "phy_name":"toSpeak.SLICE_429/C1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i4_4_lut/Z",
+            "phy_name":"toSpeak.SLICE_429/F1"
+        },
+        "arrive":10.138,
+        "delay":0.449
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4318",
+            "phy_name":"toSpeak.n4318"
+        },
+        "arrive":12.306,
+        "delay":2.168
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/mux_59_i13_3_lut/A",
+            "phy_name":"toSpeak.SLICE_116/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/mux_59_i13_3_lut/Z",
+            "phy_name":"toSpeak.SLICE_116/F1"
+        },
+        "arrive":12.782,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[12]",
+            "phy_name":"toSpeak.nextVShiftOut[12]"
+        },
+        "arrive":12.782,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i5/CK->toSpeak/state_FSM_i5/Q
+                                          SLICE_R16C22D      CLK_TO_Q1_DELAY  1.388                  6.887  6       
+toSpeak/n4258[4]                                             NET DELAY        2.022                  8.909  6       
+toSpeak/i1_2_lut/A->toSpeak/i1_2_lut/Z    SLICE_R17C21D      C0_TO_F0_DELAY   0.476                  9.385  1       
+toSpeak/n6                                                   NET DELAY        0.304                  9.689  1       
+toSpeak/i4_4_lut/D->toSpeak/i4_4_lut/Z    SLICE_R17C21D      C1_TO_F1_DELAY   0.449                 10.138  10      
+toSpeak/n4318                                                NET DELAY        2.168                 12.306  10      
+toSpeak/mux_59_i13_3_lut/A->toSpeak/mux_59_i13_3_lut/Z
+                                          SLICE_R18C21A      D1_TO_F1_DELAY   0.476                 12.782  1       
+toSpeak/nextVShiftOut[12] ( DI1 )                            NET DELAY        0.000                 12.782  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i13/CK",
+        "phy_name":"toSpeak.SLICE_116/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":45.843,
+        "delay":4.177
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                 41.666  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                 41.666  147     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        4.177                 45.843  147     
+                                                             Uncertainty      0.000                 45.843  
+                                                             Setup time       0.198                 45.645  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       45.645  
+Arrival Time                                                                                       -12.781  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                32.863  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+<A name="Timing_rpt_HoldDetailedReport"></A><B><U><big>4.2  Hold Detailed Report</big></U></B>
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : capturedVal_i0_i2/Q  (SLICE_R12C14C)
+Path End         : setMem/mod__1__i1/D  (SLICE_R12C13A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"capturedVal_i0_i3/CK",
+        "phy_name":"SLICE_78/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"capturedVal_i0_i2/Q",
+        "phy_name":"SLICE_78/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"setMem/mod__1__i1/D",
+        "phy_name":"SLICE_134/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"capturedVal_i0_i2/CK",
+            "phy_name":"SLICE_78/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"capturedVal_i0_i2/Q",
+            "phy_name":"SLICE_78/Q1"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"setMem/capturedVal[2]",
+            "phy_name":"capturedVal[2]"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"SLICE_134/D1",
+            "phy_name":"SLICE_134/D1"
+        },
+        "pin1":
+        {
+            "log_name":"SLICE_134/F1",
+            "phy_name":"SLICE_134/F1"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"capturedVal[2].sig_058.FeedThruLUT",
+            "phy_name":"capturedVal[2].sig_058.FeedThruLUT"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+capturedVal_i0_i2/CK->capturedVal_i0_i2/Q
+                                          SLICE_R12C14C      CLK_TO_Q1_DELAY  0.766                  3.801  2       
+setMem/capturedVal[2]                                        NET DELAY        0.701                  4.502  2       
+SLICE_134/D1->SLICE_134/F1                SLICE_R12C13A      D1_TO_F1_DELAY   0.248                  4.750  1       
+capturedVal[2].sig_058.FeedThruLUT ( DI1 )
+                                                             NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"setMem/mod__1__i2/CK",
+        "phy_name":"SLICE_134/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : capturedVal_i0_i0/Q  (SLICE_R12C14B)
+Path End         : setMem/fmOffset_i0_i0/D  (SLICE_R11C14D)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"capturedVal_i0_i0/CK",
+        "phy_name":"SLICE_65/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"capturedVal_i0_i0/Q",
+        "phy_name":"SLICE_65/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"setMem/fmOffset_i0_i0/D",
+        "phy_name":"SLICE_131/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"capturedVal_i0_i0/CK",
+            "phy_name":"SLICE_65/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"capturedVal_i0_i0/Q",
+            "phy_name":"SLICE_65/Q0"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"setMem/capturedVal[0]",
+            "phy_name":"capturedVal[0]"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"SLICE_131/D0",
+            "phy_name":"SLICE_131/D0"
+        },
+        "pin1":
+        {
+            "log_name":"SLICE_131/F0",
+            "phy_name":"SLICE_131/F0"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"capturedVal[0].sig_040.FeedThruLUT",
+            "phy_name":"capturedVal[0].sig_040.FeedThruLUT"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+capturedVal_i0_i0/CK->capturedVal_i0_i0/Q
+                                          SLICE_R12C14B      CLK_TO_Q0_DELAY  0.766                  3.801  1       
+setMem/capturedVal[0]                                        NET DELAY        0.701                  4.502  1       
+SLICE_131/D0->SLICE_131/F0                SLICE_R11C14D      D0_TO_F0_DELAY   0.248                  4.750  1       
+capturedVal[0].sig_040.FeedThruLUT ( DI0 )
+                                                             NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"setMem/fmOffset_i0_i0/CK",
+        "phy_name":"SLICE_131/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i3/Q  (SLICE_R17C21A)
+Path End         : toSpeak/state_FSM_i4/D  (SLICE_R17C21A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i4/CK",
+        "phy_name":"toSpeak.SLICE_112/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i3/Q",
+        "phy_name":"toSpeak.SLICE_112/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i4/D",
+        "phy_name":"toSpeak.SLICE_112/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i3/CK",
+            "phy_name":"toSpeak.SLICE_112/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i3/Q",
+            "phy_name":"toSpeak.SLICE_112/Q1"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4258[2]",
+            "phy_name":"toSpeak.n4258[2]"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak.SLICE_112/D0",
+            "phy_name":"toSpeak.SLICE_112/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak.SLICE_112/F0",
+            "phy_name":"toSpeak.SLICE_112/F0"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak.n4258[2].sig_037.FeedThruLUT",
+            "phy_name":"toSpeak.n4258[2].sig_037.FeedThruLUT"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i3/CK->toSpeak/state_FSM_i3/Q
+                                          SLICE_R17C21A      CLK_TO_Q1_DELAY  0.766                  3.801  4       
+toSpeak/n4258[2]                                             NET DELAY        0.701                  4.502  4       
+toSpeak.SLICE_112/D0->toSpeak.SLICE_112/F0
+                                          SLICE_R17C21A      D0_TO_F0_DELAY   0.248                  4.750  1       
+toSpeak.n4258[2].sig_037.FeedThruLUT ( DI0 )
+                                                             NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i4/CK",
+        "phy_name":"toSpeak.SLICE_112/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i2/Q  (SLICE_R17C21C)
+Path End         : toSpeak/state_FSM_i3/D  (SLICE_R17C21A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i1/CK",
+        "phy_name":"toSpeak.SLICE_97/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i2/Q",
+        "phy_name":"toSpeak.SLICE_97/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i3/D",
+        "phy_name":"toSpeak.SLICE_112/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i2/CK",
+            "phy_name":"toSpeak.SLICE_97/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i2/Q",
+            "phy_name":"toSpeak.SLICE_97/Q1"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4258[1]",
+            "phy_name":"toSpeak.n4258[1]"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak.SLICE_112/D1",
+            "phy_name":"toSpeak.SLICE_112/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak.SLICE_112/F1",
+            "phy_name":"toSpeak.SLICE_112/F1"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak.n4258[1].sig_038.FeedThruLUT",
+            "phy_name":"toSpeak.n4258[1].sig_038.FeedThruLUT"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i2/CK->toSpeak/state_FSM_i2/Q
+                                          SLICE_R17C21C      CLK_TO_Q1_DELAY  0.766                  3.801  4       
+toSpeak/n4258[1]                                             NET DELAY        0.701                  4.502  4       
+toSpeak.SLICE_112/D1->toSpeak.SLICE_112/F1
+                                          SLICE_R17C21A      D1_TO_F1_DELAY   0.248                  4.750  1       
+toSpeak.n4258[1].sig_038.FeedThruLUT ( DI1 )
+                                                             NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i4/CK",
+        "phy_name":"toSpeak.SLICE_112/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i7/Q  (SLICE_R16C22B)
+Path End         : toSpeak/state_FSM_i8/D  (SLICE_R16C22D)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i7/CK",
+        "phy_name":"toSpeak.SLICE_432/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i7/Q",
+        "phy_name":"toSpeak.SLICE_432/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i8/D",
+        "phy_name":"toSpeak.SLICE_108/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i7/CK",
+            "phy_name":"toSpeak.SLICE_432/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i7/Q",
+            "phy_name":"toSpeak.SLICE_432/Q1"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/sck_N_428",
+            "phy_name":"toSpeak.sck_N_428"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i50_2_lut/B",
+            "phy_name":"toSpeak.SLICE_108/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i50_2_lut/Z",
+            "phy_name":"toSpeak.SLICE_108/F0"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4294",
+            "phy_name":"toSpeak.n4294"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i7/CK->toSpeak/state_FSM_i7/Q
+                                          SLICE_R16C22B      CLK_TO_Q1_DELAY  0.766                  3.801  29      
+toSpeak/sck_N_428                                            NET DELAY        0.701                  4.502  29      
+toSpeak/i50_2_lut/B->toSpeak/i50_2_lut/Z  SLICE_R16C22D      D0_TO_F0_DELAY   0.248                  4.750  1       
+toSpeak/n4294 ( DI0 )                                        NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i8/CK",
+        "phy_name":"toSpeak.SLICE_108/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i9/Q  (SLICE_R16C22A)
+Path End         : toSpeak/state_FSM_i10/D  (SLICE_R16C22A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i10/CK",
+        "phy_name":"toSpeak.SLICE_106/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i9/Q",
+        "phy_name":"toSpeak.SLICE_106/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i10/D",
+        "phy_name":"toSpeak.SLICE_106/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i9/CK",
+            "phy_name":"toSpeak.SLICE_106/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i9/Q",
+            "phy_name":"toSpeak.SLICE_106/Q1"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/LDAC_N_432",
+            "phy_name":"toSpeak.LDAC_N_432"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak.SLICE_106/D0",
+            "phy_name":"toSpeak.SLICE_106/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak.SLICE_106/F0",
+            "phy_name":"toSpeak.SLICE_106/F0"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak.LDAC_N_432.sig_033.FeedThruLUT",
+            "phy_name":"toSpeak.LDAC_N_432.sig_033.FeedThruLUT"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i9/CK->toSpeak/state_FSM_i9/Q
+                                          SLICE_R16C22A      CLK_TO_Q1_DELAY  0.766                  3.801  4       
+toSpeak/LDAC_N_432                                           NET DELAY        0.701                  4.502  4       
+toSpeak.SLICE_106/D0->toSpeak.SLICE_106/F0
+                                          SLICE_R16C22A      D0_TO_F0_DELAY   0.248                  4.750  1       
+toSpeak.LDAC_N_432.sig_033.FeedThruLUT ( DI0 )
+                                                             NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i10/CK",
+        "phy_name":"toSpeak.SLICE_106/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i8/Q  (SLICE_R16C22D)
+Path End         : toSpeak/state_FSM_i9/D  (SLICE_R16C22A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i8/CK",
+        "phy_name":"toSpeak.SLICE_108/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i8/Q",
+        "phy_name":"toSpeak.SLICE_108/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i9/D",
+        "phy_name":"toSpeak.SLICE_106/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i8/CK",
+            "phy_name":"toSpeak.SLICE_108/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i8/Q",
+            "phy_name":"toSpeak.SLICE_108/Q0"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4258[7]",
+            "phy_name":"toSpeak.n4258[7]"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak.SLICE_106/D1",
+            "phy_name":"toSpeak.SLICE_106/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak.SLICE_106/F1",
+            "phy_name":"toSpeak.SLICE_106/F1"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak.n4258[7].sig_034.FeedThruLUT",
+            "phy_name":"toSpeak.n4258[7].sig_034.FeedThruLUT"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i8/CK->toSpeak/state_FSM_i8/Q
+                                          SLICE_R16C22D      CLK_TO_Q0_DELAY  0.766                  3.801  4       
+toSpeak/n4258[7]                                             NET DELAY        0.701                  4.502  4       
+toSpeak.SLICE_106/D1->toSpeak.SLICE_106/F1
+                                          SLICE_R16C22A      D1_TO_F1_DELAY   0.248                  4.750  1       
+toSpeak.n4258[7].sig_034.FeedThruLUT ( DI1 )
+                                                             NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i10/CK",
+        "phy_name":"toSpeak.SLICE_106/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/state_FSM_i1/Q  (SLICE_R17C21C)
+Path End         : toSpeak/state_FSM_i2/D  (SLICE_R17C21C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i1/CK",
+        "phy_name":"toSpeak.SLICE_97/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i1/Q",
+        "phy_name":"toSpeak.SLICE_97/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i2/D",
+        "phy_name":"toSpeak.SLICE_97/DI1"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/state_FSM_i1/CK",
+            "phy_name":"toSpeak.SLICE_97/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/state_FSM_i1/Q",
+            "phy_name":"toSpeak.SLICE_97/Q0"
+        },
+        "arrive":3.801,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4258[0]",
+            "phy_name":"toSpeak.n4258[0]"
+        },
+        "arrive":4.502,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i42_2_lut/B",
+            "phy_name":"toSpeak.SLICE_97/D1"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i42_2_lut/Z",
+            "phy_name":"toSpeak.SLICE_97/F1"
+        },
+        "arrive":4.750,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/n4286",
+            "phy_name":"toSpeak.n4286"
+        },
+        "arrive":4.750,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/state_FSM_i1/CK->toSpeak/state_FSM_i1/Q
+                                          SLICE_R17C21C      CLK_TO_Q0_DELAY  0.766                  3.801  4       
+toSpeak/n4258[0]                                             NET DELAY        0.701                  4.502  4       
+toSpeak/i42_2_lut/B->toSpeak/i42_2_lut/Z  SLICE_R17C21C      D1_TO_F1_DELAY   0.248                  4.750  1       
+toSpeak/n4286 ( DI1 )                                        NET DELAY        0.000                  4.750  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/state_FSM_i1/CK",
+        "phy_name":"toSpeak.SLICE_97/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":3.035,
+        "delay":3.035
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        3.035                  3.035  148     
+                                                             Uncertainty      0.000                  3.035  
+                                                             Hold time        0.000                  3.035  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.035  
+Arrival Time                                                                                         4.750  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/vShiftOut_i8/Q  (SLICE_R18C18C)
+Path End         : toSpeak/vShiftOut_i9/D  (SLICE_R18C18C)
+Source Clock     : clk (F)
+Destination Clock: clk (F)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i9/CK",
+        "phy_name":"toSpeak.SLICE_120/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":2.306,
+        "delay":2.306
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        2.306                  2.306  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i8/Q",
+        "phy_name":"toSpeak.SLICE_120/Q1"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i9/D",
+        "phy_name":"toSpeak.SLICE_120/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/vShiftOut_i8/CK",
+            "phy_name":"toSpeak.SLICE_120/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/vShiftOut_i8/Q",
+            "phy_name":"toSpeak.SLICE_120/Q1"
+        },
+        "arrive":3.072,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/vShiftOut[8]",
+            "phy_name":"toSpeak.vShiftOut[8]"
+        },
+        "arrive":3.773,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i5308_2_lut/A",
+            "phy_name":"toSpeak.SLICE_120/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i5308_2_lut/Z",
+            "phy_name":"toSpeak.SLICE_120/F0"
+        },
+        "arrive":4.021,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[9]",
+            "phy_name":"toSpeak.nextVShiftOut[9]"
+        },
+        "arrive":4.021,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/vShiftOut_i8/CK->toSpeak/vShiftOut_i8/Q
+                                          SLICE_R18C18C      CLK_TO_Q1_DELAY  0.766                  3.072  1       
+toSpeak/vShiftOut[8]                                         NET DELAY        0.701                  3.773  1       
+toSpeak/i5308_2_lut/A->toSpeak/i5308_2_lut/Z
+                                          SLICE_R18C18C      D0_TO_F0_DELAY   0.248                  4.021  1       
+toSpeak/nextVShiftOut[9] ( DI0 )                             NET DELAY        0.000                  4.021  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i9/CK",
+        "phy_name":"toSpeak.SLICE_120/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":2.306,
+        "delay":2.306
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        2.306                  2.306  148     
+                                                             Uncertainty      0.000                  2.306  
+                                                             Hold time        0.000                  2.306  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -2.306  
+Arrival Time                                                                                         4.021  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : toSpeak/vShiftOut_i13/Q  (SLICE_R18C21A)
+Path End         : toSpeak/vShiftOut_i14/D  (SLICE_R18C22B)
+Source Clock     : clk (F)
+Destination Clock: clk (F)
+Logic Level      : 2
+Delay Ratio      : 40.9% (route), 59.1% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.715 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i13/CK",
+        "phy_name":"toSpeak.SLICE_116/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":2.306,
+        "delay":2.306
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Delay  Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk
+                                                             NET DELAY        2.306                  2.306  148     
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i13/Q",
+        "phy_name":"toSpeak.SLICE_116/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i14/D",
+        "phy_name":"toSpeak.SLICE_115/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/vShiftOut_i13/CK",
+            "phy_name":"toSpeak.SLICE_116/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/vShiftOut_i13/Q",
+            "phy_name":"toSpeak.SLICE_116/Q0"
+        },
+        "arrive":3.072,
+        "delay":0.766
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/vShiftOut[13]",
+            "phy_name":"toSpeak.vShiftOut[13]"
+        },
+        "arrive":3.773,
+        "delay":0.701
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"toSpeak/i5296_2_lut/A",
+            "phy_name":"toSpeak.SLICE_115/D0"
+        },
+        "pin1":
+        {
+            "log_name":"toSpeak/i5296_2_lut/Z",
+            "phy_name":"toSpeak.SLICE_115/F0"
+        },
+        "arrive":4.021,
+        "delay":0.248
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"toSpeak/nextVShiftOut[14]",
+            "phy_name":"toSpeak.nextVShiftOut[14]"
+        },
+        "arrive":4.021,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+toSpeak/vShiftOut_i13/CK->toSpeak/vShiftOut_i13/Q
+                                          SLICE_R18C21A      CLK_TO_Q0_DELAY  0.766                  3.072  1       
+toSpeak/vShiftOut[13]                                        NET DELAY        0.701                  3.773  1       
+toSpeak/i5296_2_lut/A->toSpeak/i5296_2_lut/Z
+                                          SLICE_R18C22B      D0_TO_F0_DELAY   0.248                  4.021  1       
+toSpeak/nextVShiftOut[14] ( DI0 )                            NET DELAY        0.000                  4.021  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"clkGen/hf_osc/CLKHF",
+        "phy_name":"clkGen.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"toSpeak/vShiftOut_i14/CK",
+        "phy_name":"toSpeak.SLICE_115/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":0.000,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk",
+            "phy_name":"clk"
+        },
+        "arrive":2.306,
+        "delay":2.306
+    }
+    ]
+}
+</xmp>
+</tapath>
+
+                                                             CONSTRAINT       0.000                  0.000  1       
+clkGen.hf_osc/CLKHF                       HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  148     
+voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/clk ( CLK )
+                                                             NET DELAY        2.306                  2.306  148     
+                                                             Uncertainty      0.000                  2.306  
+                                                             Hold time        0.000                  2.306  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -2.306  
+Arrival Time                                                                                         4.021  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.715  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"<span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#timing_rpt_top>Timing Report</A></LI>
+<LI><A href=#Timing_rpt_DesignChecking>1  DESIGN CHECKING</A></LI>
+<UL>
+<LI><A href=#Timing_rpt_SDCConstraints>1.1  SDC Constraints</A></LI>
+<LI><A href=#Timing_rpt_CombinationalLoop>1.2  Combinational Loop</A></LI>
+</UL>
+<LI><A href=#Timing_rpt_ClockSummary>2  CLOCK SUMMARY</A></LI>
+<LI><A href=#Timing_rpt_AnalysisSummary>3  TIMING ANALYSIS SUMMARY</A></LI>
+<UL>
+<LI><A href=#Timing_rpt_Overall>3.1  Overall (Setup and Hold)</A></LI>
+<LI><A href=#Timing_rpt_SetupSummary>3.2  Setup Summary Report</A></LI>
+<LI><A href=#Timing_rpt_HoldSummary>3.3  Hold Summary Report</A></LI>
+<LI><A href=#Timing_rpt_UnconstrainedReport>3.4  Unconstrained Report</A></LI>
+</UL>
+<LI><A href=#Timing_rpt_DetailedReport>4  DETAILED REPORT</A></LI>
+<UL>
+<LI><A href=#Timing_rpt_SetupDetailedReport>4.1  Setup Detailed Report</A></LI>
+<LI><A href=#Timing_rpt_HoldDetailedReport>4.2  Hold Detailed Report</A></LI>
+</UL>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+   var funScroll = function() {
+      var top = document.body.scrollTop;
+      if (top == 0) {
+         scrollStep = 0;
+         return;
+      }
+      if (scrollStep == 0)
+         scrollStep = top/20 + 1;
+      top -= scrollStep;
+      if (top < 0)
+         top = 0;
+      document.body.scrollTop = top;
+      requestAnimationFrame(funScroll);
+   };
+   funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+   var backToTop = document.getElementById('back_to_top')
+   if (document.body.scrollTop > 0) {
+      backToTop.style.display = 'block';
+   } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+   bottom:20px; right:20px;
+   width:30px; height:30px;
+   font-size: 20px;
+   padding: 2px 5px 2px 5px;
+   position:fixed;
+   background-color:rgba(210,210,210,0.1);
+   border-style: solid;
+   border-color: rgba(192,192,192,0.8);
+   border-width:1px;
+   display:none;
+   -webkit-transform: rotate(90deg);
+   -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+   outline-width:0px;
+}
+</style>
+
+<style type='text/css'>
+pre {
+  margin-left: 2em;
+}
+tapath {
+  display: none;
+}
+.tools {
+  font-family: arial;
+  font-size: 0.8em;
+  text-align: center;
+  display: inline-block;
+}
+.tools:before{
+  content: "Shown in: ";
+  color: #1c79ec;
+  text-align: center;
+  padding-left: 0.5em;
+}
+.tools a {
+  color: rgb(192, 192, 192);
+  cursor: pointer;
+}
+.tools a:link {
+  text-decoration: none;
+}
+.tools a:hover {
+  color: #1c79ec;
+}
+.tools a:before {
+  content: " ";
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  padding-right: 5px;
+  padding-left: 2px;
+}
+.tools a:after {
+  text-align: center;
+  padding-right: 5px;
+}
+.na:before {
+  background: url("qrc:///report-view-html/images/netlist_analyzer_16.png") no-repeat center;
+}
+.na:after {
+  content: "Netlist Analyzer";
+}
+.fp:before {
+  background: url("qrc:///report-view-html/images/floorplanview_16.png") no-repeat center;
+}
+.fp:after {
+  content: "Physical Designer Placement Mode";
+}
+.phv:before {
+  background: url("qrc:///report-view-html/images/epic_16.png") no-repeat center;
+}
+.phv:after {
+  content: "Physical Designer Routing Mode";
+}
+</style>
+<script type='text/javascript'>
+<!--
+var show_log = 1; var show_phy = 1;
+function createTool(cls, path_obj) {
+  var tool = document.createElement('a');
+  tool.className = cls;
+  tool.onclick = (function(tool, path) {
+    return function() {
+      var tool_name;
+      var logical = false;
+      if (typeof path !== 'string' || path === null || path.length == 0)
+        return;
+      switch (cls) {
+        case 'na':
+          tool_name = 'SCHEMATIC_VIEW';
+          logical = true;
+          break;
+        case 'fp':
+          tool_name = 'FLOORPLANNER';
+          break;
+        case 'phv':
+          tool_name = 'PHYSICAL_VIEW';
+          break;
+      }
+      var url = 'NGView://' + tool_name + '/tapath?' + (logical?'view_type=tech&':'') + 'path=' +
+                encodeURIComponent(path);
+      this.href = url;
+    }
+  })(cls, path_obj).bind(tool);
+  return tool;
+}
+function createTools(path_element) {
+  var tools = document.createElement('span');
+  tools.className = 'tools';
+  var path = path_element.textContent;
+  if (show_log) 
+    tools.appendChild(createTool('na', path));
+  if (show_phy) {
+    tools.appendChild(createTool('fp', path));
+    tools.appendChild(createTool('phv', path));
+  }
+  var p = path_element.parentNode;
+  p.insertBefore(tools, path_element);
+}
+function handleLeftpaths(left_paths, index) {
+    if (left_paths.length > index) {
+      setTimeout(function(paths, i) {
+        return function() {
+          var path = paths[i];
+          createTools(path);
+          handleLeftpaths(paths, i+1);
+        }
+      }(left_paths, index));
+    }
+}
+window.onload = function() {
+  if (!show_log && !show_phy) return; 
+  if (typeof window._$radiant !== 'undefined') {
+    var all_paths = document.getElementsByTagName('tapath');
+    handleLeftpaths(all_paths, 0);
+  }
+}
+//-->
+</script>
+</BODY>
+

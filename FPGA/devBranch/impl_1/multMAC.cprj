@@ -1,0 +1,7 @@
+-ver "C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd"
+-ver "C:/Users/kbox/Desktop/FPGA/devBranch/multMAC/rtl/multMAC.v"
+-sdc  "C:/Users/kbox/Desktop/FPGA/devBranch/multMAC/constraints/multMAC.ldc"
+-path "C:/Users/kbox/Desktop/FPGA/devBranch/multMAC"
+-top multMAC
+-a "iCE40UP"

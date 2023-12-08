@@ -1,0 +1,821 @@
+# Reading pref.tcl
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:12 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 15:10:12 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:12 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv 
+# -- Compiling module memory_tb
+# 
+# Top level modules:
+# 	memory_tb
+# End time: 15:10:12 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:12 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 15:10:12 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:12 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv 
+# -- Compiling module spiMcu_tb
+# -- Compiling module spiDac_tb
+# 
+# Top level modules:
+# 	spiMcu_tb
+# 	spiDac_tb
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:13 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv 
+# -- Compiling module top
+# -- Compiling module timingCtrl
+# 
+# Top level modules:
+# 	top
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:13 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:13 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv 
+# -- Compiling module waveFetcher
+# -- Compiling module phaseAccumulator
+# -- Compiling module waveTable
+# 
+# Top level modules:
+# 	waveFetcher
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:13 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv 
+# -- Compiling module waveFetcher_tb
+# 
+# Top level modules:
+# 	waveFetcher_tb
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:13 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv 
+# -- Compiling module waveFetcherFM
+# -- Compiling module phaseAccumulatorFM
+# -- Compiling module modulationGeneratorFM
+# -- Compiling module mac16x16x32FM
+# 
+# Top level modules:
+# 	waveFetcherFM
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:10:13 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv 
+# -- Compiling module waveTable
+# -- Compiling module waveSin
+# -- Compiling module waveSaw
+# -- Compiling module waveSqr
+# -- Compiling module waveTri
+# 
+# Top level modules:
+# 	waveTable
+# End time: 15:10:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui work.top_tb -L iCE40UP
+# vsim -gui work.top_tb -L iCE40UP 
+# Start time: 15:10:29 on Dec 05,2023
+# //  ModelSim - Lattice FPGA Edition 2021.4 Oct 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Lattice FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.top
+# Loading work.timingCtrl
+# Loading iCE40UP.HSOSC
+# Loading iCE40UP.VLO
+# Loading iCE40UP.HSOSC_CORE
+# Loading iCE40UP.HFOSC
+# Loading iCE40UP.HFOSC_CORE
+# Loading work.spiMcu
+# Loading work.memory
+# Loading work.waveFetcherFM
+# Loading work.modulationGeneratorFM
+# Loading work.waveTable
+# Loading work.waveSin
+# Loading work.waveSaw
+# Loading work.waveSqr
+# Loading work.waveTri
+# Loading work.phaseAccumulatorFM
+# Loading work.mac16x16x32FM
+# Loading work.multMAC
+# Loading work.multMAC_ipgen_lscc_multiplier
+# Loading work.adderMac
+# Loading work.adderMac_ipgen_lscc_adder
+# Loading work.spiDac
+# Loading work.multMAC_ipgen_lscc_multiplier_dsp
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut File: C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv Line: 9
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (8) for port 'LDAC'. The port definition is at: C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/dut File: C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv Line: 9
+# ** Warning: (vsim-3722) C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv(9): [TFMPC] - Missing connection for port 'volVal'.
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:23 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 15:11:23 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:23 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv 
+# -- Compiling module memory_tb
+# 
+# Top level modules:
+# 	memory_tb
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv 
+# -- Compiling module spiMcu_tb
+# -- Compiling module spiDac_tb
+# 
+# Top level modules:
+# 	spiMcu_tb
+# 	spiDac_tb
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv 
+# -- Compiling module top
+# -- Compiling module timingCtrl
+# 
+# Top level modules:
+# 	top
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv 
+# -- Compiling module waveFetcher
+# -- Compiling module phaseAccumulator
+# -- Compiling module waveTable
+# 
+# Top level modules:
+# 	waveFetcher
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv 
+# -- Compiling module waveFetcher_tb
+# 
+# Top level modules:
+# 	waveFetcher_tb
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv 
+# -- Compiling module waveFetcherFM
+# -- Compiling module phaseAccumulatorFM
+# -- Compiling module modulationGeneratorFM
+# -- Compiling module mac16x16x32FM
+# 
+# Top level modules:
+# 	waveFetcherFM
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:11:24 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv 
+# -- Compiling module waveTable
+# -- Compiling module waveSin
+# -- Compiling module waveSaw
+# -- Compiling module waveSqr
+# -- Compiling module waveTri
+# 
+# Top level modules:
+# 	waveTable
+# End time: 15:11:24 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb
+# Loading work.top
+# Loading work.timingCtrl
+# Loading work.spiMcu
+# Loading work.memory
+# Loading work.waveFetcherFM
+# Loading work.modulationGeneratorFM
+# Loading work.waveTable
+# Loading work.waveSin
+# Loading work.waveSaw
+# Loading work.waveSqr
+# Loading work.waveTri
+# Loading work.phaseAccumulatorFM
+# Loading work.mac16x16x32FM
+# Loading work.spiDac
+add wave -position end  sim:/top_tb/rst
+add wave -position end  sim:/top_tb/msck
+add wave -position end  sim:/top_tb/mCS
+add wave -position end  sim:/top_tb/msdi
+add wave -position end  sim:/top_tb/sck
+add wave -position end  sim:/top_tb/sdi
+add wave -position end  sim:/top_tb/sdo
+add wave -position end  sim:/top_tb/LDAC
+add wave -position end  sim:/top_tb/note
+add wave -position end  sim:/top_tb/i
+add wave -position end  sim:/top_tb/j
+add wave -position end  sim:/top_tb/volVal
+add wave -position end  sim:/top_tb/savedVol
+add wave -position end  sim:/top_tb/sendVal
+add wave -position end  sim:/top_tb/CS
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: kbox  Hostname: HGMZ0R3  ProcessID: 11952
+#           Attempting to use alternate WLF file "./wlft77ib3m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft77ib3m
+run 10000
+run 10000000
+run 100000000
+run 100000000
+add wave -position end  sim:/top_tb/dut/toSpeak/rst
+add wave -position end  sim:/top_tb/dut/toSpeak/clk
+add wave -position end  sim:/top_tb/dut/toSpeak/spiClk
+add wave -position end  sim:/top_tb/dut/toSpeak/start
+add wave -position end  sim:/top_tb/dut/toSpeak/sck
+add wave -position end  sim:/top_tb/dut/toSpeak/sdo
+add wave -position end  sim:/top_tb/dut/toSpeak/CS
+add wave -position end  sim:/top_tb/dut/toSpeak/LDAC
+add wave -position end  sim:/top_tb/dut/toSpeak/voltageVal
+add wave -position end  sim:/top_tb/dut/toSpeak/loadCtrl
+add wave -position end  sim:/top_tb/dut/toSpeak/running
+add wave -position end  sim:/top_tb/dut/toSpeak/done
+add wave -position end  sim:/top_tb/dut/toSpeak/state
+add wave -position end  sim:/top_tb/dut/toSpeak/nextState
+add wave -position end  sim:/top_tb/dut/toSpeak/vShiftOut
+add wave -position end  sim:/top_tb/dut/toSpeak/nextVShiftOut
+add wave -position end  sim:/top_tb/dut/toSpeak/val2Send
+add wave -position end  sim:/top_tb/dut/toSpeak/shiftCount
+add wave -position end  sim:/top_tb/dut/toSpeak/nextShiftCount
+restart -f
+# Closing VCD file "top_tb.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 100000000
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:14:45 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 15:14:45 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Closing VCD file "top_tb.vcd"
+# Loading work.spiMcu
+# Loading work.spiDac
+run 10000000
+run 100000000
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 15:15:44 on Dec 05,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 15:15:44 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Closing VCD file "top_tb.vcd"
+# Loading work.spiMcu
+# Loading work.spiDac
+run 100000000
+add wave -position 15  sim:/top_tb/dut/readMCU/rst
+add wave -position 16  sim:/top_tb/dut/readMCU/sck
+add wave -position 17  sim:/top_tb/dut/readMCU/CS
+add wave -position 18  sim:/top_tb/dut/readMCU/sdi
+add wave -position 19  sim:/top_tb/dut/readMCU/recVal
+add wave -position 20  sim:/top_tb/dut/readMCU/done
+add wave -position 21  sim:/top_tb/dut/readMCU/loadCtrl
+add wave -position 22  sim:/top_tb/dut/readMCU/shiftCount
+add wave -position 23  sim:/top_tb/dut/readMCU/nextShiftCount
+restart -f
+# Closing VCD file "top_tb.vcd"
+run 1000000000
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:43 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 03:34:43 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv 
+# -- Compiling module memory_tb
+# 
+# Top level modules:
+# 	memory_tb
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv 
+# -- Compiling module spiMcu_tb
+# -- Compiling module spiDac_tb
+# 
+# Top level modules:
+# 	spiMcu_tb
+# 	spiDac_tb
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv 
+# -- Compiling module top
+# -- Compiling module timingCtrl
+# 
+# Top level modules:
+# 	top
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv 
+# -- Compiling module waveFetcher
+# -- Compiling module phaseAccumulator
+# -- Compiling module waveTable
+# 
+# Top level modules:
+# 	waveFetcher
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv 
+# -- Compiling module waveFetcher_tb
+# 
+# Top level modules:
+# 	waveFetcher_tb
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv 
+# -- Compiling module waveFetcherFM
+# -- Compiling module phaseAccumulatorFM
+# -- Compiling module modulationGeneratorFM
+# -- Compiling module mac16x16x32FM
+# 
+# Top level modules:
+# 	waveFetcherFM
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:34:58 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv 
+# -- Compiling module waveTable
+# -- Compiling module waveSin
+# -- Compiling module waveSaw
+# -- Compiling module waveSqr
+# -- Compiling module waveTri
+# 
+# Top level modules:
+# 	waveTable
+# End time: 03:34:58 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Closing VCD file "top_tb.vcd"
+# Loading work.top_tb
+# Loading work.top
+# Loading work.timingCtrl
+# Loading work.spiMcu
+# Loading work.memory
+# Loading work.waveFetcherFM
+# Loading work.modulationGeneratorFM
+# Loading work.waveTable
+# Loading work.waveSin
+# Loading work.waveSaw
+# Loading work.waveSqr
+# Loading work.waveTri
+# Loading work.phaseAccumulatorFM
+# Loading work.mac16x16x32FM
+# Loading work.spiDac
+# Load canceled
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:40 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv 
+# -- Compiling module memory_tb
+# 
+# Top level modules:
+# 	memory_tb
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv 
+# -- Compiling module spiMcu_tb
+# -- Compiling module spiDac_tb
+# 
+# Top level modules:
+# 	spiMcu_tb
+# 	spiDac_tb
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv 
+# -- Compiling module top
+# -- Compiling module timingCtrl
+# 
+# Top level modules:
+# 	top
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv 
+# -- Compiling module waveFetcher
+# -- Compiling module phaseAccumulator
+# -- Compiling module waveTable
+# 
+# Top level modules:
+# 	waveFetcher
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv 
+# -- Compiling module waveFetcher_tb
+# 
+# Top level modules:
+# 	waveFetcher_tb
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv 
+# -- Compiling module waveFetcherFM
+# -- Compiling module phaseAccumulatorFM
+# -- Compiling module modulationGeneratorFM
+# -- Compiling module mac16x16x32FM
+# 
+# Top level modules:
+# 	waveFetcherFM
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:35:41 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv 
+# -- Compiling module waveTable
+# -- Compiling module waveSin
+# -- Compiling module waveSaw
+# -- Compiling module waveSqr
+# -- Compiling module waveTri
+# 
+# Top level modules:
+# 	waveTable
+# End time: 03:35:41 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.top_tb
+# Loading work.top
+# Loading work.timingCtrl
+# Loading work.spiMcu
+# Loading work.memory
+# Loading work.waveFetcherFM
+# Loading work.modulationGeneratorFM
+# Loading work.waveTable
+# Loading work.waveSin
+# Loading work.waveSaw
+# Loading work.waveSqr
+# Loading work.waveTri
+# Loading work.phaseAccumulatorFM
+# Loading work.mac16x16x32FM
+# Loading work.spiDac
+run 10000000000
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:42:14 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 03:42:14 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Closing VCD file "top_tb.vcd"
+# Loading work.top_tb
+run 10000000000
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/wave
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/a
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/y
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/sinOut
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/sawOut
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/sqrOut
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/triOut
+add wave -position end  sim:/top_tb/dut/voltageGetter/waves/waveIn
+restart -f
+# Closing VCD file "top_tb.vcd"
+run 10000000
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 03:46:54 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory_tb.sv 
+# -- Compiling module memory_tb
+# 
+# Top level modules:
+# 	memory_tb
+# End time: 03:46:54 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv 
+# -- Compiling module spiMcu
+# -- Compiling module spiDac
+# 
+# Top level modules:
+# 	spiMcu
+# 	spiDac
+# End time: 03:46:54 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi_tb.sv 
+# -- Compiling module spiMcu_tb
+# -- Compiling module spiDac_tb
+# 
+# Top level modules:
+# 	spiMcu_tb
+# 	spiDac_tb
+# End time: 03:46:54 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv 
+# -- Compiling module top
+# -- Compiling module timingCtrl
+# 
+# Top level modules:
+# 	top
+# End time: 03:46:54 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 03:46:54 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:54 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher.sv 
+# -- Compiling module waveFetcher
+# -- Compiling module phaseAccumulator
+# -- Compiling module waveTable
+# 
+# Top level modules:
+# 	waveFetcher
+# End time: 03:46:55 on Dec 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:55 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcher_tb.sv 
+# -- Compiling module waveFetcher_tb
+# 
+# Top level modules:
+# 	waveFetcher_tb
+# End time: 03:46:55 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:55 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv 
+# -- Compiling module waveFetcherFM
+# -- Compiling module phaseAccumulatorFM
+# -- Compiling module modulationGeneratorFM
+# -- Compiling module mac16x16x32FM
+# 
+# Top level modules:
+# 	waveFetcherFM
+# End time: 03:46:55 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+# Start time: 03:46:55 on Dec 07,2023
+# vlog -reportprogress 300 -work work C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv 
+# -- Compiling module waveTable
+# -- Compiling module waveSin
+# -- Compiling module waveSaw
+# -- Compiling module waveSqr
+# -- Compiling module waveTri
+# 
+# Top level modules:
+# 	waveTable
+# End time: 03:46:55 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Closing VCD file "top_tb.vcd"
+# Loading work.top_tb
+# Loading work.top
+# Loading work.timingCtrl
+# Loading work.spiMcu
+# Loading work.memory
+# Loading work.waveFetcherFM
+# Loading work.modulationGeneratorFM
+# Loading work.waveTable
+# Loading work.waveSin
+# Loading work.waveSaw
+# Loading work.waveSqr
+# Loading work.waveTri
+# Loading work.phaseAccumulatorFM
+# Loading work.mac16x16x32FM
+# Loading work.spiDac
+run 10000000
+run 10000000000
+# WARNING: No extended dataflow license exists

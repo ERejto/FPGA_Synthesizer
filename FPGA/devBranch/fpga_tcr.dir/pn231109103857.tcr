@@ -1,0 +1,6 @@
+#Start recording tcl command: 11/9/2023 10:34:39
+#Project Location: C:/Users/kbox/Desktop/FPGA/fpga; Project name: fpga
+prj_open "C:/Users/kbox/Desktop/FPGA/fpga/fpga.rdf"
+launch_programmer_prj "C:/lscc/radiant/3.2"
+launch_programmer_prj "C:/lscc/radiant/3.2"
+#Stop recording: 11/9/2023 10:38:57

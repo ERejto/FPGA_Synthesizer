@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="2" build_time="1701981199">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1701981199"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1701981200"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1701981201"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1701981182">
+            <Task name="Map" build_result="2" update_result="0" update_time="1701981182"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1701981194">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1701981194"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1701981195"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1701981181">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1701981181"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1701981195"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1701808776"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1701808776"/>
+        </Milestone>
+        <Report name="IBIS/fpga_impl_1.ibs" last_build_time="1701981200" last_build_size="54641"/>
+        <Report name="fpga_impl_1.bgn" last_build_time="1701981199" last_build_size="1010"/>
+        <Report name="fpga_impl_1.bin" last_build_time="1701981199" last_build_size="104156"/>
+        <Report name="fpga_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
+        <Report name="fpga_impl_1.twr.html" last_build_time="1701981195" last_build_size="182331"/>
+        <Report name="fpga_impl_1.udb" last_build_time="1701981194" last_build_size="113386"/>
+        <Report name="fpga_impl_1_map.udb" last_build_time="1701981182" last_build_size="70023"/>
+        <Report name="fpga_impl_1_rtl.udb" last_build_time="1701981180" last_build_size="35764"/>
+        <Report name="fpga_impl_1_syn.udb" last_build_time="1701981181" last_build_size="48304"/>
+        <Report name="fpga_impl_1_vo.sdf" last_build_time="1701981201" last_build_size="777206"/>
+        <Report name="fpga_impl_1_vo.vo" last_build_time="1701981201" last_build_size="742249"/>
+    </Strategy>
+</BuildStatus>
+                                

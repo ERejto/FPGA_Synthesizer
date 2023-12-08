@@ -1,0 +1,55 @@
+#Start recording tcl command: 11/28/2023 17:54:23
+#Project Location: C:/Users/kbox/Desktop/FPGA/fpga; Project name: fpga
+prj_open "C:/Users/kbox/Desktop/FPGA/fpga/fpga.rdf"
+prj_remove_source "C:/Users/kbox/Desktop/FPGA/fpga/ljj/ljj.ipx"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/spi.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_enable_source "C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/spi.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_source_format -src "source/impl_1/wave.txt" ""
+prj_add_source "C:/Users/kbox/Desktop/FPGA/fpga/fmMac/fmMac.ipx"
+prj_remove_source "C:/Users/kbox/Desktop/FPGA/fpga/fmMac/fmMac.ipx"
+prj_add_source "C:/Users/kbox/Desktop/FPGA/fpga/adderMac/adderMac.ipx"
+prj_add_source "C:/Users/kbox/Desktop/FPGA/fpga/multMAC/multMAC.ipx"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.2"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_source_format -src "source/impl_1/wave.txt" ""
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/wave.txt"
+file copy -force -- "C:/Users/kbox/Desktop/FPGA/fpga/wave.txt" "C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1"
+prj_add_source "C:/Users/kbox/Desktop/FPGA/fpga/source/impl_1/wave.txt"
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/28/2023 22:24:28

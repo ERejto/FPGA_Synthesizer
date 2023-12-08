@@ -1,0 +1,537 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///C:/lscc/radiant/3.2/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/3.2/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 3.2.0.18.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Dec  7 12:32:55 2023
+
+
+Command Line:  C:\lscc\radiant\3.2\ispfpga\bin\nt64\synthesis.exe -f fpga_impl_1_lattice.synproj -gui -msgset C:/Users/kbox/Desktop/FPGA/devBranch/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = fpga_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-sdc option: SDC file input is fpga_impl_1_cpe.ldc.
+-path C:/Users/kbox/Desktop/FPGA/devBranch (searchpath added)
+-path C:/Users/kbox/Desktop/FPGA/devBranch/adderMac (searchpath added)
+-path C:/Users/kbox/Desktop/FPGA/devBranch/impl_1 (searchpath added)
+-path C:/Users/kbox/Desktop/FPGA/devBranch/multMAC (searchpath added)
+-path C:/lscc/radiant/3.2/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.v
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/adderMac/rtl/adderMac.v
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/multMAC/rtl/multMAC.v
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/top.sv
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/settingsMemory.sv
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveFetcherFM.sv
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/waveTables.sv
+Verilog design file = C:/Users/kbox/Desktop/FPGA/devBranch/source/impl_1/spi.sv
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/3.2/ip/pmi/pmi_iCE40UP.vhd
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/top.sv.
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/settingsmemory.sv.
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavefetcherfm.sv.
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv.
+WARNING - synthesis: Unexpected file name extension for Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/spi.sv.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(1): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_addsub.v(40): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(2): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_add.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_add.v(50): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(3): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_complex_mult.v(52): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(4): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_counter.v(39): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(5): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_fifo.v(44): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(6): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_fifo_dc.v(47): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(7): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_mac.v(52): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(8): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(9): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_multaddsub.v(52): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(10): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_mult.v(51): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(11): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp.v(48): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(12): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(13): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_rom.v(45): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/rom/rtl/lscc_rom.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(14): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(15): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/3.2/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/3.2/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/addermac/rtl/addermac.v. VERI-1482
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/multmac/rtl/multmac.v. VERI-1482
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/top.sv. VERI-1482
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/settingsmemory.sv. VERI-1482
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavefetcherfm.sv. VERI-1482
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv. VERI-1482
+Analyzing Verilog file c:/users/kbox/desktop/fpga/devbranch/source/impl_1/spi.sv. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd
+
+INFO - synthesis: c:/lscc/radiant/3.2/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+INFO - synthesis: The default VHDL library search path is now "C:/Users/kbox/Desktop/FPGA/devBranch/impl_1". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): top
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/top.sv(1): compiling module top. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/top.sv(35): compiling module timingCtrl. VERI-1018
+INFO - synthesis: C:/lscc/radiant/3.2/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b10). VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/spi.sv(2): compiling module spiMcu. VERI-1018
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/spi.sv(26): expression size 32 truncated to fit in target size 4. VERI-1209
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/settingsmemory.sv(1): compiling module memory. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavefetcherfm.sv(1): compiling module waveFetcherFM. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavefetcherfm.sv(73): compiling module modulationGeneratorFM. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(1): compiling module waveTable. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(31): compiling module waveSin. VERI-1018
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(36): net wave does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(43): compiling module waveSaw. VERI-1018
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(48): net wave does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(55): compiling module waveSqr. VERI-1018
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(60): net wave does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(67): compiling module waveTri. VERI-1018
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(72): net wave does not have a driver. VDB-1002
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavefetcherfm.sv(14): compiling module phaseAccumulatorFM. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavefetcherfm.sv(117): compiling module mac16x16x32FM. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/multmac/rtl/multmac.v(11): compiling module multMAC. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/multmac/rtl/multmac.v(99): compiling module multMAC_ipgen_lscc_multiplier(COEFF=2,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP"). VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/multmac/rtl/multmac.v(455): compiling module multMAC_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,A_SIGNED="off",B_SIGNED="off",USE_IREG="off"). VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/addermac/rtl/addermac.v(11): compiling module adderMac. VERI-1018
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/addermac/rtl/addermac.v(103): compiling module adderMac_ipgen_lscc_adder(D_WIDTH=32,USE_OREG="on",PIPELINES=1,FAMILY="iCE40UP"). VERI-1018
+Removed duplicate sequential element U_PIPELINES_GT_0.B_Im_pipe[0](16 bit), because it is equivalent to U_PIPELINES_GT_0.A_Im_pipe[0]
+
+INFO - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/spi.sv(67): compiling module spiDac. VERI-1018
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/spi.sv(141): expression size 32 truncated to fit in target size 5. VERI-1209
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 61
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(36): ram wave_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(48): ram wave_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(60): ram wave_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(72): ram wave_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: Bit 0 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register U_PIPELINES_GT_0.A_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register U_PIPELINES_GT_0.ApB_Re_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 31 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 30 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 29 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 28 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 27 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 26 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 25 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 24 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 23 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 22 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 21 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 20 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 19 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 18 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 17 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 16 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 15 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 14 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 13 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 12 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 11 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 10 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 9 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 8 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 7 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 6 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 5 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 4 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 3 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register U_PIPELINES_GT_0.ApB_Im_pipe[0] is stuck at Zero
+WARNING - synthesis: c:/users/kbox/desktop/fpga/devbranch/addermac/rtl/addermac.v(382): Register \voltageGetter/accumPhase/fmMac/add/lscc_adder_inst/cout_re_o is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\toSpeak/state' with one-hot encoding
+State machine has 10 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000001
+
+ 0001 -> 0000000010
+
+ 0010 -> 0000000100
+
+ 0011 -> 0000001000
+
+ 0100 -> 0000010000
+
+ 0101 -> 0000100000
+
+ 0110 -> 0001000000
+
+ 0111 -> 0010000000
+
+ 1000 -> 0100000000
+
+ 1001 -> 1000000000
+
+INFO - synthesis: Safe logic for state machine with register '\toSpeak/state' will be inferred
+
+
+
+WARNING - synthesis: Bit 15 of Register \toSpeak/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \toSpeak/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \toSpeak/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \toSpeak/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \toSpeak/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \toSpeak/state_FSM is stuck at Zero
+WARNING - synthesis: Attribute syn_multstyle on instance mult_169 has unsupported value "DSP"
+
+WARNING - synthesis: Attribute syn_multstyle on instance mult_168 has unsupported value "DSP"
+
+Mapped 2 multiplier(s)
+
+
+WARNING - synthesis: Bit 2 of Register \voltageGetter/accumPhase/fmMac/multiply/lscc_multiplier_inst/genblk1.u_lscc_multiplier_dsp/U_PIPELINES_GT_0.AxB_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \voltageGetter/accumPhase/fmMac/multiply/lscc_multiplier_inst/genblk1.u_lscc_multiplier_dsp/U_PIPELINES_GT_0.AxB_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \voltageGetter/accumPhase/fmMac/multiply/lscc_multiplier_inst/genblk1.u_lscc_multiplier_dsp/U_PIPELINES_GT_0.AxB_pipe[0] is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \voltageGetter/accumPhase/fmMac/multiply/lscc_multiplier_inst/genblk1.u_lscc_multiplier_dsp/result_o is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \voltageGetter/accumPhase/fmMac/multiply/lscc_multiplier_inst/genblk1.u_lscc_multiplier_dsp/result_o is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \voltageGetter/accumPhase/fmMac/multiply/lscc_multiplier_inst/genblk1.u_lscc_multiplier_dsp/result_o is stuck at Zero
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (top)######################
+Number of register bits => 288 of 5280 (5 % )
+CCU2 => 65
+FD1P3XZ => 288
+HSOSC_CORE => 1
+IB => 4
+INV => 1
+LUT4 => 512
+MAC16 => 2
+OB => 12
+################### End Area Report ##################
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 4
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : clkGen/clk, loads : 1
+  Net : msck_c, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : rst_c, loads : 279
+  Net : voltageGetter/accumPhase/carIndex[3], loads : 84
+  Net : voltageGetter/accumPhase/carIndex[2], loads : 83
+  Net : voltageGetter/accumPhase/carIndex[1], loads : 83
+  Net : voltageGetter/modGen/modIndex[3], loads : 83
+  Net : voltageGetter/modGen/modIndex[2], loads : 82
+  Net : voltageGetter/modGen/modIndex[0], loads : 81
+  Net : voltageGetter/modGen/modIndex[1], loads : 80
+  Net : voltageGetter/accumPhase/carIndex[0], loads : 78
+  Net : voltageGetter/modGen/modIndex[4], loads : 51
+################### End Clock Report ##################
+
+Peak Memory Usage: 126 MB
+
+--------------------------------------------------------------
+Total CPU Time: 2 secs 
+Total REAL Time: 6 secs 
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

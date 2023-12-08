@@ -1,0 +1,115 @@
+
+
+module top_tb();
+    logic rst, msck,  mCS, msdi, sck, sdi, sdo;
+	logic [7:0] note, i, j;
+	logic [7:0] volVal, savedVol;
+	logic [15:0] sendVal;
+    // device under test
+    top dut(rst, msck,  mCS, msdi, sck, sdo, CS, volVal);
+    
+
+ // Create dumpfile
+	initial begin
+     $dumpfile("top_tb.vcd");
+     $dumpvars(0, top_tb);
+   end
+
+// creete save file
+	initial begin
+	integer saveFile;
+	 saveFile = $fopen("output_vol.txt","w");
+	end
+
+//pulse reset initialize saving
+	initial begin
+	 rst = 1; #27; rst = 0;
+	 savedVol = 0;
+   end
+   
+  
+// set beta val
+ initial begin
+	sendVal = 0'b0001_100110_000000; // fmbeta = 38 sustain =0;
+	i=0;
+	mCS = 0;
+	#100;
+	while (i != 16) begin
+	mCS = 1;
+	#1; msdi = sendVal[15-i];
+	msck = 1; 
+    #1;
+    #3; msck = 0; #4
+    i = i + 1;
+	end
+	mCS=0;
+end
+
+// send note value and start playing 
+  initial begin
+	sendVal = 0'b0000_0010_0000_0000;
+	i=0;
+	mCS = 0;
+	#400;
+	while (i != 16) begin
+	mCS = 1;
+	#1; msdi = sendVal[15-i];
+	msck = 1; 
+    #1;
+    #3; msck = 0; #4
+    i = i + 1;
+	end
+	mCS=0;
+end
+
+always begin
+	if (volVal != savedVol) begin
+		$fwrite(saveFile,"%u, ",volVal);
+		savedVol = volVal;
+	end
+ 
+
+
+/* old top tb
+module top_tb();
+    logic rst, sck, sdi, sdo;
+	logic [7:0] note, i, j;
+	logic [7:0] mcuVVal;
+    // device under test
+    top dut(rst, sck, sdo, CS);
+    
+
+ // Create dumpfile
+ initial
+   begin
+     $dumpfile("top_tb.vcd");
+     $dumpvars(0, top_tb);
+   end
+
+//pulse reset
+ initial
+   begin
+	 i=0;
+	 j=0;
+	 rst = 1; #27; rst = 0;
+   end
+   
+    // every once and a while, do an spi readwrite.
+always begin
+	if (j==0) begin
+		#100; j = 1;
+	end
+	if (i == 8) begin
+		#100; i=0;
+		end
+	#1; sdi = note[7-i];
+	sck = 1; 
+    #1; mcuVVal[7-i] = sdo; 
+    #3; sck = 0; #4
+    i = i + 1;
+	end
+ 
+    
+endmodule
+*/
+endmodule

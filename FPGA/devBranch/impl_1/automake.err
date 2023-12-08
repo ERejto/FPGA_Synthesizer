@@ -1,0 +1,190 @@
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(66): instantiating unknown module SB_MAC16. VERI-1063
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(146): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(146): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(147): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(165): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(7): waveTable expects 2 arguments. VERI-1182
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(9): waveTable expects 2 arguments. VERI-1182
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(145): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - Processing input files had at least one error. Exiting.
+ERROR - LDC file fpga_impl_1_cpe.ldc does not exist.
+ERROR - Processing input files had at least one error. Exiting.
+ERROR - LDC file fpga_impl_1_cpe.ldc does not exist.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(148): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(197): instantiating unknown module SB_MAC16. VERI-1063
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(95): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(95): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(95): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(95): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/fpga/source/impl_1/wavefetcher.sv(95): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcher.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - Design doesn't fit into device specified, refer to the Map report for more details.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(139): instantiating unknown module multMAC. VERI-1063
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavefetcherfm.sv(96): cannot open file wave.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/testbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(38): cannot open file waveSin8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(50): cannot open file waveSaw8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(62): cannot open file waveSqr8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
+ERROR - c:/users/kbox/desktop/fpga/devbranch/source/impl_1/wavetables.sv(74): cannot open file waveTri8.txt&#xA;
+ERROR - Stopping Synthesis Tool flow due to error.
